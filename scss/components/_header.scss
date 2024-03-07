@@ -1,0 +1,51 @@
+.header {
+  position: relative;
+  height: 100vh;
+
+  &__slider-item {
+    position: relative;
+    height: 100vh;
+    background-color: #000;
+    background-image: (radial-gradient(62.00% 62.00% at 43% 49%, rgba(34, 34, 34, 0.43), rgb(15, 15, 15) 100%), url(../images/heder/hero-bg-1@1x.jpg));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-mini-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: (radial-gradient(62.00% 62.00% at 43% 49%, rgba(34, 34, 34, 0.43), rgb(15, 15, 15) 100%), url(../images/heder/hero-bg-1@2x.jpg));
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (min-device-pixel-ratio: 3),
+    screen and (-webkit-min-device-pixel-ratio: 3),
+    screen and (-o-mini-device-pixel-ratio: 3/1),
+    screen and (min-resolution: 228dpi),
+    screen and (min-resolution: 3dppx) {
+      background-image: (radial-gradient(62.00% 62.00% at 43% 49%, rgba(34, 34, 34, 0.43), rgb(15, 15, 15) 100%), url(../images/heder/hero-bg-1@3x.jpg));
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.slick-arrow {
+  color: $white;
+  position: absolute;
+  top: rem(40);
+  z-index: 5;
+}
+
+.slick-next {
+  right: rem(80);
+}
+
+.slick-prev {
+  right: rem(125);
+}

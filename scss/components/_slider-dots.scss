@@ -1,0 +1,32 @@
+.slider-dots {
+  position: absolute;
+  right: rem(80);
+  bottom: rem(40);
+  max-width: rem(920);
+  width: 100%;
+  color: $white;
+  counter-reset: number;
+
+  &__item {
+    position: relative;
+  }
+
+  &__box {
+    width: rem(200);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: rem(4) solid $accent;
+    padding-top: rem(6);
+  }
+
+  &__nunber {
+    font-size: rem(24);
+    font-weight: 800;
+    line-height: 1.42;
+  }
+
+  &__name {
+    font-weight: 300;
+  }
+}

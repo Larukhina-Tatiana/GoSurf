@@ -1,0 +1,42 @@
+.slider-item {
+
+  &__info {
+    position: absolute;
+    right: rem(80);
+    bottom: rem(116);
+    text-align: right;
+  }
+
+  &__info-subtitle {
+    margin-bottom: rem(5);
+  }
+
+  &__info-title {
+    margin-bottom: rem(48);
+  }
+
+  &__info-subtext {
+    margin-bottom: rem(8);
+  }
+
+  &__info-text {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__info-link {
+    svg {
+      @include transition ($transition-property: color);
+      color: $white;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          color: $accent;
+        }
+      }
+    }
+  }
+}

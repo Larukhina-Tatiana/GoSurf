@@ -1,0 +1,74 @@
+// 100
+@font-face {
+    font-family: 'FiraSans';
+    src: url(../fonts/FiraSans-Thin.woff2) format('woff2'), url(../fonts/FiraSans-Thin.woff) format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+// 300
+@font-face {
+    font-family: 'FiraSans';
+    src: url(../fonts/FiraSans-Light.woff2) format('woff2'), url(../fonts/FiraSans-Light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+// 400
+@font-face {
+    font-family: 'FiraSans';
+    src: url(../fonts/FiraSans-Regular.woff2) format('woff2'), url(../fonts/FiraSans-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// 500
+
+@font-face {
+    font-family: 'FiraSans';
+    src: url(../fonts/FiraSans-Medium.woff2) format('woff2'), url(../fonts/FiraSans-Medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+// %SFUIText-500 {
+//     font-family: 'Montserrat', sans-serif;
+//     font-weight: 500;
+//     line-height: 120%;
+// }
+
+
+// 800
+@font-face {
+    font-family: 'FiraSans';
+    src: url(../fonts/FiraSans-ExtraBold.woff2) format('woff2'), url(../fonts/FiraSans-ExtraBold.woff) format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+// %Montserrat-600 {
+//     font-family: 'Montserrat', cursive;
+//     font-weight: 600;
+// }
+// 700
+// @font-face {
+//     font-family: 'Montserrat';
+//     src: url(../fonts/Montserrat-Bold.woff2) format('woff2'), url(../fonts/Montserrat-Bold.woff) format('woff');
+//     font-weight: 700;
+//     font-style: normal;
+// }
+// %Montserrat-700 {
+//     font-family: 'Montserrat', cursive;
+//     font-weight: 700;
+// }
+
+// @font-face {
+//     font-family: 'icons';
+//     font-display: swap;
+//     src: url(../fonts/icons.woff2) format('woff2'), url(../fonts/icons.woff) format('woff');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+// @extend %Montserrat-600;

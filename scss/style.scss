@@ -1,0 +1,12 @@
+@import './utils/_vars';
+@import '../node_modules/slick-carousel/slick/slick';
+// @import './utils/_libs';
+@import './utils/_global';
+@import './utils/fonts';
+
+
+
+@import './components/header';
+@import './components/slider-item';
+@import './components/titles';
+@import './components/slider-dots';
