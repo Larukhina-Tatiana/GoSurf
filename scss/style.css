@@ -295,6 +295,15 @@ button,
   position: relative;
   height: 100vh;
 }
+.header__aside-title {
+  font-size: 12.5rem;
+  font-weight: 800;
+  line-height: 0.78;
+  color: #000000;
+  opacity: 0.7;
+  width: 29.1875rem;
+  text-transform: uppercase;
+}
 .header__slider-item {
   position: relative;
   height: 100vh;

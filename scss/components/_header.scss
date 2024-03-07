@@ -2,6 +2,19 @@
   position: relative;
   height: 100vh;
 
+  &__aside {
+
+    &-title {
+      font-size: rem(200);
+      font-weight: 800;
+      line-height: calc(156/200);
+      color: $black;
+      opacity: .7;
+      width: rem(467);
+      text-transform: uppercase;
+    }
+  }
+
   &__slider-item {
     position: relative;
     height: 100vh;
