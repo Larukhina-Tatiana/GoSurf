@@ -1,0 +1,20 @@
+.menu {
+
+  &__item {
+    @include adaptivevalue(margin-bottom, 27, 15, 1200, 320, 1);
+    margin-bottom: rem(37);
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(6);
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: calc(14/12);
+    letter-spacing: rem(3);
+    color: $white;
+  }
+}

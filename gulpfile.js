@@ -49,6 +49,7 @@ function styles() {
   // return src("app/scss/style.scss")
   return src([
     "node_modules/swiper/swiper-bundle.css",
+    "node_modules/animate.css/animate.css",
     // "node_modules/simplelightbox/dist/simple-lightbox.css",
     "node_modules/nouislider/dist/nouislider.css",
     // "node_modules/aos/dist/aos.css",
