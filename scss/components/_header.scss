@@ -10,7 +10,6 @@
     color: $white;
     opacity: .07;
     max-width: rem(467);
-    text-transform: uppercase;
     z-index: 4;
   }
 
@@ -42,7 +41,6 @@
     border-right: rem(1) solid $gray;
     height: 100vh;
     text-align: center;
-    color: $white;
   }
 
   &__logo {
@@ -87,6 +85,7 @@
     font-weight: 300;
     line-height: calc(14/12);
     letter-spacing: rem(1.05);
+    text-transform: capitalize;
 
     ::before {
       content: url(../images/icons/location.svg);

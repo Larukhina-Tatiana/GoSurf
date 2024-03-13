@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./scss/style.css">
+
+  <!-- Demo styles -->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } */
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    body {
+      background: #000;
+      color: #000;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mySwiper2 {
+      height: 40%;
+      width: 100%;
+    }
+
+    .mySwiper {
+      height: 100%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper .swiper-slide {
+      width: 35%;
+      height: 750px;
+      opacity: 0.4;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+
+  <!-- <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+    class="swiper mySwiperLocation mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle">
+        </div>
+        <div class="surf__map-content">
+
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                1. Malibu Beach
+              </p>
+              <p class="surf__map-content-subtitle">
+                California | USA
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">8 - 11</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.2</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">3 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                2. Airlie Beach
+              </p>
+              <p class="surf__map-content-subtitle">
+                Australia
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                3. Cloud Nine
+              </p>
+              <p class="surf__map-content-subtitle">
+                Siargao | Philippines
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                4. Vieux Boucau
+              </p>
+              <p class="surf__map-content-subtitle">
+                Hossegor | France
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                5. Malibu Beach
+              </p>
+              <p class="surf__map-content-subtitle">
+                Australia
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                6. Airlie Beach
+              </p>
+              <p class="surf__map-content-subtitle">
+                Australia
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                7. Cloud Nine
+              </p>
+              <p class="surf__map-content-subtitle">
+                Siargao | Philippines
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                8. Vieux Boucau
+              </p>
+              <p class="surf__map-content-subtitle">
+                Hossegor | France
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div> -->
+  <div class="surf__map-slider swiper mySwiper2 mySwiperLocation">
+    <div class="surf__map-swiper swiper-wrapper">
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle surf__map-dots-circle--dots1">
+        </div>
+        <div class="surf__map-content">
+
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                1. Malibu Beach
+              </p>
+              <p class="surf__map-content-subtitle">
+                California | USA
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">8 - 11</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.2</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">3 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle surf__map-dots-circle--dots2">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                2. Airlie Beach
+              </p>
+              <p class="surf__map-content-subtitle">
+                Australia
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle surf__map-dots-circle--dots3">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                3. Cloud Nine
+              </p>
+              <p class="surf__map-content-subtitle">
+                Siargao | Philippines
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle surf__map-dots-circle--dots4">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                4. Vieux Boucau
+              </p>
+              <p class="surf__map-content-subtitle">
+                Hossegor | France
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle surf__map-dots-circle--dots5">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                5. Malibu Beach
+              </p>
+              <p class="surf__map-content-subtitle">
+                Australia
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle surf__map-dots-circle--dots6">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                6. Airlie Beach
+              </p>
+              <p class="surf__map-content-subtitle">
+                Australia
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle surf__map-dots-circle--dots7">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                7. Cloud Nine
+              </p>
+              <p class="surf__map-content-subtitle">
+                Siargao | Philippines
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="surf__map-dots swiper-slide">
+        <div class="surf__map-dots-circle surf__map-dots-circle--dots8">
+        </div>
+        <div class="surf__map-content">
+          <div class="surf__map-contrnt-row">
+            <div class="surf__map-content-head">
+              <p class="surf__map-content-title">
+                8. Vieux Boucau
+              </p>
+              <p class="surf__map-content-subtitle">
+                Hossegor | France
+              </p>
+              <a class="surf__map-content-link" href="">
+                <svg class="surf__map-content-link-svg" width="24" height="20">
+                  <use href="./images/icons/icons.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="surf__map-dots-contrnt-row">
+            <ul class="surf__map-content-list">
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-surf"></use>
+                </svg>
+                <p class="surf__map-content-number">9 - 13</p>
+                <p class="surf__map-content-text">Surf (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-water"></use>
+                </svg>
+                <p class="surf__map-content-number">+2.3</p>
+                <p class="surf__map-content-text">Tide (FT)</p>
+              </li>
+              <li class="surf__map-content-item">
+                <svg class="surf__map-content-svg" width="40" height="25">
+                  <use href="./images/icons/icons.svg#icon-wind"></use>
+                </svg>
+                <p class="surf__map-content-number">4 SE</p>
+                <p class="surf__map-content-text">Wind (KTS)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div thumbsSlider="" class="swiper mySwiperImages mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url(./images/surf/surf-slide1@1x.jpg)">
+        <div class="surf__box-inner">
+          <p class="surf__box-inner-title">Malibu Beach</p>
+          <p class="surf__box-inner-location">California <span>|</span> USA</p>
+          <div class="surf__box-inner-btn">
+            <a class="btn" href="">
+              view <span>Surf</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url(./images/surf/surf-slide2@1x.jpg)">
+        <div class="surf__box-inner">
+          <p class="surf__box-inner-title">Airlie Beach</p>
+          <p class="surf__box-inner-location">Queensland <span>|</span> Australia</p>
+          <div class="surf__box-inner-btn">
+            <a class="btn" href="">
+              view <span>Surf</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url(./images/surf/surf-slide3@1x.jpg)">
+        <div class="surf__box-inner">
+          <p class="surf__box-inner-title">
+            Cloud Nine
+          </p>
+          <div class="surf__box-inner-location">Siargao <span>|</span> Philippines</div>
+          <div class="surf__box-inner-btn">
+            <a class="btn" href="">
+              view <span>Surf</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url(./images/surf/surf-slide4@1x.jpg)">
+        <div class="surf__box-inner">
+          <p class="surf__box-inner-title">Vieux Boucau</p>
+          <p class="surf__box-inner-location">Hossegor <span>|</span> France</p>
+          <div class="surf__box-inner-btn">
+            <a class="btn" href="">
+              view <span>Surf</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url(./images/surf/surf-slide1@1x.jpg)">
+        <div class="surf__box-inner">
+          <p class="surf__box-inner-title">Malibu Beach</p>
+          <p class="surf__box-inner-location">California <span>|</span> USA</p>
+          <div class="surf__box-inner-btn">
+            <a class="btn" href="">
+              view <span>Surf</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url(./images/surf/surf-slide2@1x.jpg)">
+        <div class="surf__box-inner">
+          <p class="surf__box-inner-title">Airlie Beach</p>
+          <p class="surf__box-inner-location">Queensland <span>|</span> Australia</p>
+          <div class="surf__box-inner-btn">
+            <a class="btn" href="">
+              view <span>Surf</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url(./images/surf/surf-slide3@1x.jpg)">
+        <div class="surf__box-inner">
+          <p class="surf__box-inner-title">
+            Cloud Nine
+          </p>
+          <div class="surf__box-inner-location">Siargao <span>|</span> Philippines</div>
+          <div class="surf__box-inner-btn">
+            <a class="btn" href="">
+              view <span>Surf</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url(./images/surf/surf-slide4@1x.jpg)">
+        <div class="surf__box-inner">
+          <p class="surf__box-inner-title">Vieux Boucau</p>
+          <p class="surf__box-inner-location">Hossegor <span>|</span> France</p>
+          <div class="surf__box-inner-btn">
+            <a class="btn" href="">
+              view <span>Surf</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiperImages", {
+      spaceBetween: 10,
+      slidesPerView: "auto",
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    var swiper2 = new Swiper(".mySwiperLocation", {
+      // spaceBetween: 10,
+      // slidesPerView: 8,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
+</body>
+
+</html>

@@ -14,13 +14,8 @@ $accent: #4AF6CD;
 $white: #FFFFFF;
 $black: #000000;
 $gray: #979797;
+$bacground: rgba(#1c2121, .85);
 
-
-// $dark: #323232;
-// $light-grey: #E0E0E0;
-// $background: #E5E5E5;
-// $border: 1px solid #A1A1A1;
-// $background-sect: #F6F6F8;
 
 
 @mixin transition ($transition-property: color, $transition-duration: 300ms, $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)) {

@@ -1,10 +1,45 @@
+.titles {
+  position: relative;
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    // top: rem(0);
+    left: rem(230);
+    font-size: rem(80);
+    color: $white;
+
+    &::before {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      background-color: $accent;
+      width: rem(80);
+      height: rem(1);
+      right: 0;
+      top: rem(8);
+    }
+  }
+
+  &-bg {
+    position: absolute;
+    top: rem(-30);
+    left: rem(-5);
+    font-size: rem(200);
+    font-weight: 800;
+    color: rgba($white, .02);
+    transform: translateX(-50px);
+    display: inline-block;
+  }
+}
+
+
 .info-subtitle {
   color: $gray;
   font-size: rem(22);
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: rem(7.33);
-  text-transform: uppercase;
   position: relative;
   display: inline-block;
 
@@ -44,7 +79,6 @@
   color: $white;
   font-weight: 800;
   line-height: 1.075;
-  text-transform: uppercase;
 }
 
 .info-title {
@@ -53,132 +87,18 @@
 
 .info-text {
   font-size: rem(40);
+
+  &--margin-top {
+    margin-top: rem(25);
+  }
+
+  span {
+    font-weight: 100;
+  }
 }
 
-
-
-
-// .section-title {
-//   color: var(--black);
-//   @include adaptivevalue(font-size, 32, 16, 1200, 320, 1);
-//   font-weight: 500;
-//   line-height: 1.2;
-//   text-transform: uppercase;
-//   ;
-// }
-
-// .title-h1 {
-//   @include adaptivevalue(font-size, 48, 38, 1200, 320, 1);
-//   font-weight: 500;
-//   line-height: 1.2;
-// }
-
-// .title-h2 {
-//   @include adaptivevalue(font-size, 40, 22, 1200, 320, 1);
-//   font-weight: 400;
-//   line-height: 1.2;
-//   text-transform: uppercase;
-//   margin-bottom: rem(20);
-// }
-
-
-// .title-h3 {
-//   @include adaptivevalue(font-size, 16, 14, 1200, 320, 1);
-//   font-weight: 500;
-//   line-height: 1.4;
-// }
-
-// .title-h4 {
-//   // @include adaptivevalue(font-size, 16, 14, 1200, 320, 1);
-//   font-size: rem(16);
-//   font-weight: 600;
-//   line-height: 1.5;
-// }
-
-
-// .title-h5 {
-//   @include adaptivevalue(font-size, 20, 15, 1200, 320, 1);
-//   font-weight: 600;
-//   line-height: 1.4;
-//   // @include adaptivevalue(line-height, 34, 32, 1620, 320, 1);
-//   text-transform: uppercase;
-// }
-
-// %title-h5 {
-//   @include adaptivevalue(font-size, 20, 15, 1200, 320, 1);
-//   font-weight: 600;
-//   line-height: 1.4;
-//   // @include adaptivevalue(line-height, 34, 32, 1620, 320, 1);
-//   text-transform: uppercase;
-// }
-
-// .title-h6 {
-//   @include adaptivevalue(font-size, 24, 18, 1200, 320, 1);
-//   font-weight: 600;
-//   line-height: 1.4;
-//   text-transform: uppercase;
-// }
-
-// .text2 {
-//   color: var(--gray-bright);
-//   font-size: 0.75rem;
-//   font-weight: 500;
-//   line-height: 1.5;
-// }
-
-// .section-text {
-//   color: rgba(255, 255, 255, 0.70);
-//   letter-spacing: 0.54px;
-//   @include adaptivevalue(font-size, 18, 16, 1620, 320, 1);
-//   @include adaptivevalue(letter-spacing, .54, .48, 1620, 320, 1);
-// }
-
-// .section__link {
-//   @include adaptivevalue(margin-top, 60, 20, 1620, 320, 1);
-//   @include adaptivevalue(font-size, 20, 18, 1620, 320, 1);
-//   @include adaptivevalue(letter-spacing, 1, .9, 1620, 320, 1);
-//   line-height: rem(46);
-//   color: var(--accent);
-//   font-weight: 600;
-//   position: relative;
-//   @include transition ($transition-property: text-decoration);
-
-//   @media (any-hover: hover) {
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
-
-//   &::after {
-//     position: absolute;
-//     content: url(../images/icons/arrow-next.svg);
-//     width: rem(9);
-//     height: rem(17);
-//     top: 25%;
-//     transform: translateY(-50%);
-//     right: 0;
-//   }
-// }
-
-// .title-form {
-//   @include adaptivevalue(font-size, 20, 18, 1620, 320, 1);
-//   font-weight: 600;
-//   position: relative;
-//   @include transition ($transition-property: all);
-
-//   &::after {
-//     position: absolute;
-//     content: url(../images/icons/drop-arrow.svg);
-//     width: rem(17);
-//     height: rem(8);
-//     right: rem(30);
-//     top: 25%;
-//     cursor: pointer;
-//   }
-
-
-//   &--active::after {
-//     top: 65%;
-//     transform: rotate(180deg);
-//   }
-// }
+.subtitle {
+  text-align: right;
+  padding-right: rem(80);
+  margin-top: rem(50);
+}
