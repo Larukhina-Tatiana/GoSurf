@@ -8,6 +8,8 @@
     <title>GoSurf</title>
     <link rel="stylesheet" href="./scss/utils/reset.css">
     <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./scss/style.css">
 </head>
 
@@ -59,38 +61,38 @@
             </a>
             <nav class="header__menu menu">
                 <ul class="menu__list">
-                    <li class="menu__item">
+                    <div class="menu__item">
                         <a class="menu__link" href="">
                             <svg class="menu__link-svg" width="41" height="32" aria-label="icon">
                                 <use href="./images/icons/icons.svg#surf"></use>
                             </svg>
                             Surf
                         </a>
-                    </li>
-                    <li class="menu__item">
+                    </div>
+                    <div class="menu__item">
                         <a class="menu__link" href="">
                             <svg class="menu__link-svg" width="50" height="32" aria-label="icon">
                                 <use href="./images/icons/icons.svg#travel"></use>
                             </svg>
                             Travel
                         </a>
-                    </li>
-                    <li class="menu__item">
+                    </div>
+                    <div class="menu__item">
                         <a class="menu__link" href="">
                             <svg class="menu__link-svg" width="31" height="32" aria-label="icon">
                                 <use href="./images/icons/icons.svg#camp"></use>
                             </svg>
                             Sleep
                         </a>
-                    </li>
-                    <li class="menu__item">
+                    </div>
+                    <div class="menu__item">
                         <a class="menu__link" href="">
                             <svg class="menu__link-svg" width="15" height="32" aria-label="icon">
                                 <use href="./images/icons/icons.svg#shop"></use>
                             </svg>
                             Shop
                         </a>
-                    </li>
+                    </div>
                 </ul>
             </nav>
             <button class="header__search">
@@ -171,36 +173,180 @@
             </li>
         </ul>
         <ul class="slider-dots">
-            <li class="slider-dots__item">
+            <div class="slider-dots__item">
                 <div class="slider-dots__box">
                     <p class="slider-dots__nunber">01</p>
                     <p class="slider-dots__name">North Shore</p>
                 </div>
-            </li>
-            <li class="slider-dots__item">
+            </div>
+            <div class="slider-dots__item">
                 <div class="slider-dots__box">
                     <p class="slider-dots__nunber">02</p>
                     <p class="slider-dots__name">South Shore</p>
                 </div>
-            </li>
-            <li class="slider-dots__item">
+            </div>
+            <div class="slider-dots__item">
                 <div class="slider-dots__box">
                     <p class="slider-dots__nunber">03</p>
                     <p class="slider-dots__name">West Shore</p>
                 </div>
-            </li>
-            <li class="slider-dots__item">
+            </div>
+            <div class="slider-dots__item">
                 <div class="slider-dots__box">
                     <p class="slider-dots__nunber">04</p>
                     <p class="slider-dots__name">East Shore</p>
                 </div>
-            </li>
+            </div>
         </ul>
     </header>
+    <div class="container">
+        <section class="surf">
+            <div class="surf__title titles">
+                <span class="titles-bg">surf
+                    <h2 class="">surf</h2>
+                </span>
+            </div>
+            <div class="surf__subtitle subtitle">
+                <p class="info-subtitle info-subtitle--left">Current location</p>
+                <p class="info-text info-text--margin-top">California <span>|</span> USA</p>
+            </div>
+            <div class="swiper mySwiper">
+                <ul class="surf__slider swiper-wrapper">
+                    <li class="surf__box swiper-slide" style="background-image: url(./images/surf/surf-slide1@1x.jpg)">
+                        <div class="surf__box-inner">
+                            <p class="surf__box-inner-title">Malibu Beach</p>
+                            <p class="surf__box-inner-location">California <span>|</span> USA</p>
+                            <div class="surf__box-inner-btn">
+                                <a class="btn" href="">
+                                    view <span>Surf</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="surf__box swiper-slide" style="background-image: url(./images/surf/surf-slide2@1x.jpg)">
+                        <div class="surf__box-inner">
+                            <p class="surf__box-inner-title">Airlie Beach</p>
+                            <p class="surf__box-inner-location">Queensland <span>|</span> Australia</p>
+                            <div class="surf__box-inner-btn">
+                                <a class="btn" href="">
+                                    view <span>Surf</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="surf__box swiper-slide" style="background-image: url(./images/surf/surf-slide3@1x.jpg)">
+                        <div class="surf__box-inner">
+                            <p class="surf__box-inner-title">
+                                Cloud Nine
+                            </p>
+                            <div class="surf__box-inner-location">Siargao <span>|</span> Philippines</div>
+                            <div class="surf__box-inner-btn">
+                                <a class="btn" href="">
+                                    view <span>Surf</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="surf__box swiper-slide" style="background-image: url(./images/surf/surf-slide4@1x.jpg)">
+                        <div class="surf__box-inner">
+                            <p class="surf__box-inner-title">Vieux Boucau</p>
+                            <p class="surf__box-inner-location">Hossegor <span>|</span> France</p>
+                            <div class="surf__box-inner-btn">
+                                <a class="btn" href="">
+                                    view <span>Surf</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="surf__box swiper-slide" style="background-image: url(./images/surf/surf-slide1@1x.jpg)">
+                        <div class="surf__box-inner">
+                            <p class="surf__box-inner-title">Malibu Beach</p>
+                            <p class="surf__box-inner-location">California <span>|</span> USA</p>
+                            <div class="surf__box-inner-btn">
+                                <a class="btn" href="">
+                                    view <span>Surf</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="surf__box swiper-slide" style="background-image: url(./images/surf/surf-slide2@1x.jpg)">
+                        <div class="surf__box-inner">
+                            <p class="surf__box-inner-title">Airlie Beach</p>
+                            <p class="surf__box-inner-location">Queensland <span>|</span> Australia</p>
+                            <div class="surf__box-inner-btn">
+                                <a class="btn" href="">
+                                    view <span>Surf</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="surf__box swiper-slide" style="background-image: url(./images/surf/surf-slide3@1x.jpg)">
+                        <div class="surf__box-inner">
+                            <p class="surf__box-inner-title">
+                                Cloud Nine
+                            </p>
+                            <div class="surf__box-inner-location">Siargao <span>|</span> Philippines</div>
+                            <div class="surf__box-inner-btn">
+                                <a class="btn" href="">
+                                    view <span>Surf</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="surf__box swiper-slide" style="background-image: url(./images/surf/surf-slide4@1x.jpg)">
+                        <div class="surf__box-inner">
+                            <p class="surf__box-inner-title">Vieux Boucau</p>
+                            <p class="surf__box-inner-location">Hossegor <span>|</span> France</p>
+                            <div class="surf__box-inner-btn">
+                                <a class="btn" href="">
+                                    view <span>Surf</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="travel">
+            <div class="travel__title titles">
+                <span class="titles-bg">Travel
+                    <h2 class="">Travel</h2>
+                </span>
+            </div>
+            <div class="travel__subtitle subtitle">
+                <p class="info-subtitle info-subtitle--left">Shore</p>
+                <p class="info-text info-text--margin-top">
+                    Airlie Beach <span>|</span> Australia
+                </p>
+            </div>
+        </section>
+        <section class="sleep">
+            <div class="sleep__title titles">
+                <span class="titles-bg">Sleep
+                    <h2 class="">Sleep</h2>
+                </span>
+            </div>
+            <div class="sleep__subtitle subtitle">
+                <p class="info-subtitle info-subtitle--left">Resorts</p>
+                <p class="info-text info-text--margin-top">
+                    Auberge <span>|</span> Australia
+                </p>
+            </div>
+        </section>
+        <section class="shop">
+            <div class="shop__title  titles">
+                <span class="titles-bg">Shop
+                    <h2 class="">Shop</h2>
+                </span>
+            </div>
+
+        </section>
+    </div>
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <script src="js/libs.min.js"></script> -->
     <script src="node_modules/slick-carousel/slick/slick.js"></script>
     <script src="js/main.js"></script>

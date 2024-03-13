@@ -1,0 +1,68 @@
+.surf {
+  padding: rem(160) 0 rem(210);
+  background-image: url(../images/surf/surf-map.png);
+  background-repeat: no-repeat;
+  background-position: right 200px;
+  background-size: auto;
+
+  &__slider {
+    padding-top: rem(110);
+
+    .slick-arrow {
+      top: rem(50);
+      color: rgba($white, .25);
+    }
+  }
+
+  &__box {
+    max-width: rem(390);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-inner {
+      min-height: rem(750);
+      background-color: $bacground;
+      position: relative;
+
+      &-title {
+        padding: rem(72) 0 0 rem(40);
+        width: rem(151);
+        font-size: rem(40);
+        font-weight: 800;
+        line-height: calc(36/40);
+      }
+
+      &-location {
+        font-size: rem(18);
+        line-height: calc(22/18);
+        letter-spacing: rem(8);
+        transform: rotate(-90deg);
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: rem(40);
+        bottom: rem(80);
+        white-space: nowrap;
+
+        span {
+          font-weight: 100;
+        }
+      }
+
+      &-btn {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+.surf__box.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active {
+  .surf__box-inner {
+    background-color: transparent;
+  }
+}

@@ -6,11 +6,11 @@ body {
   height: 100%;
 }
 
-// *,
-// *::after,
-// *::before {
-//     box-sizing: border-box;
-// }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 // REM
 @function rem($px) {
@@ -72,20 +72,7 @@ dl,
 dd {
   margin: 0;
   padding: 0;
-  // font-size: inherit;
-}
-
-
-body {
-  font-family: 'FiraSans', sans-serif;
-  font-weight: normal;
-  font-size: rem(16);
-  // @include adaptivevalue(font-size, 18, 16, 1620, 320, 1);
-  line-height: 1.5;
-  color: $white;
-  overflow-x: hidden;
-  min-width: 100vw;
-  background-color: #000;
+  font-size: inherit;
 }
 
 button {
@@ -100,10 +87,6 @@ button {
   border: none;
 }
 
-::marker {
-  margin-top: 10px;
-}
-
 button,
 [type="button"],
 [type="reset"],
@@ -111,13 +94,32 @@ button,
   -webkit-appearance: button;
 }
 
-.slick-arrow {
+::marker {
+  margin-top: 10px;
+}
 
+
+
+body {
+  font-family: 'FiraSans', sans-serif;
+  font-weight: normal;
+  font-size: rem(16);
+  // @include adaptivevalue(font-size, 18, 16, 1620, 320, 1);
+  line-height: 1.5;
+  color: $white;
+  overflow-x: hidden;
+  min-width: 100vw;
+  background-color: #171919;
+  text-transform: uppercase;
+}
+
+
+
+.slick-arrow {
   svg {
     @include transition ($transition-property: color);
 
   }
-
 
   @media (any-hover: hover) {
     &:hover {
@@ -135,71 +137,16 @@ button,
 //     min-height: 100%;
 // }
 
-.wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 
-.main {
-  overflow-x: clip;
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex: 0 0 auto;
-}
-
-
-// .hr-line {
-//     border-bottom: 1px solid var(--black);
-// }
-// .images-bg {
-// background: url(../images/footer@1x.png);
-// padding-top: 900px;
-// background-size: cover;
-// background-position: center;
-// background-repeat: no-repeat;
-
-// @media screen and (min-device-pixel-ratio: 2),
-// screen and (-webkit-min-device-pixel-ratio: 2),
-// screen and (-o-mini-device-pixel-ratio: 2/1),
-// screen and (min-resolution: 192dpi),
-// screen and (min-resolution: 2dppx) {
-//   background: url(../images/footer@2x.png);
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
+// .section {
+//   @include adaptivevalue(padding-top, 40, 20, 1200, 320, 1);
+//   @include adaptivevalue(padding-bottom, 40, 20, 1200, 320, 1);
 // }
 
-.section {
-  @include adaptivevalue(padding-top, 40, 20, 1200, 320, 1);
-  @include adaptivevalue(padding-bottom, 40, 20, 1200, 320, 1);
-}
 
-.section__background {
-  @include adaptivevalue(padding-top, 55, 20, 1620, 320, 1);
-  @include adaptivevalue(padding-bottom, 55, 20, 1620, 320, 1);
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    width: 54%;
-    height: calc(100% + 100px);
-    background: linear-gradient(to right,
-        rgba(0, 0, 0, 0.65),
-        rgba(0, 0, 0, 0.65)),
-      url(../images/background.jpg) top / cover no-repeat;
-
-    @media screen and (width < 660.01px) {
-      height: calc(100% + 44px);
-      width: 100%;
-    }
-  }
+.container {
+  max-width: 1470px;
+  margin: 0 auto;
 }
 
 .flex {

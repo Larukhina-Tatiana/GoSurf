@@ -90,6 +90,12 @@ body {
   height: 100%;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 ul[class] {
   list-style: none;
 }
@@ -131,17 +137,7 @@ dl,
 dd {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: "FiraSans", sans-serif;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #FFFFFF;
-  overflow-x: hidden;
-  min-width: 100vw;
-  background-color: #000;
+  font-size: inherit;
 }
 
 button {
@@ -156,15 +152,27 @@ button {
   border: none;
 }
 
-::marker {
-  margin-top: 10px;
-}
-
 button,
 [type=button],
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
+}
+
+::marker {
+  margin-top: 10px;
+}
+
+body {
+  font-family: "FiraSans", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  min-width: 100vw;
+  background-color: #171919;
+  text-transform: uppercase;
 }
 
 .slick-arrow svg {
@@ -177,65 +185,9 @@ button,
   }
 }
 
-.wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  overflow-x: clip;
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex: 0 0 auto;
-}
-
-.section {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-@media screen and (max-width: 1200px) {
-  .section {
-    padding-top: calc(20px + 20 * (100vw - 320px) / 880);
-  }
-}
-@media screen and (max-width: 1200px) {
-  .section {
-    padding-bottom: calc(20px + 20 * (100vw - 320px) / 880);
-  }
-}
-
-.section__background {
-  padding-top: 55px;
-  padding-bottom: 55px;
-  position: relative;
-}
-@media screen and (max-width: 1620px) {
-  .section__background {
-    padding-top: calc(20px + 35 * (100vw - 320px) / 1300);
-  }
-}
-@media screen and (max-width: 1620px) {
-  .section__background {
-    padding-bottom: calc(20px + 35 * (100vw - 320px) / 1300);
-  }
-}
-.section__background::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  width: 54%;
-  height: calc(100% + 100px);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/background.jpg) top/cover no-repeat;
-}
-@media screen and (width < 660.01px) {
-  .section__background::before {
-    height: calc(100% + 44px);
-    width: 100%;
-  }
+.container {
+  max-width: 1470px;
+  margin: 0 auto;
 }
 
 .flex {
@@ -304,7 +256,6 @@ button,
   color: #FFFFFF;
   opacity: 0.07;
   max-width: 29.1875rem;
-  text-transform: uppercase;
   z-index: 4;
 }
 .header__map {
@@ -332,7 +283,6 @@ button,
   border-right: 0.0625rem solid #979797;
   height: 100vh;
   text-align: center;
-  color: #FFFFFF;
 }
 .header__logo {
   cursor: pointer;
@@ -372,6 +322,7 @@ button,
   font-weight: 300;
   line-height: 1.1666666667;
   letter-spacing: 0.065625rem;
+  text-transform: capitalize;
 }
 .header__lacation ::before {
   content: url(../images/icons/location.svg);
@@ -464,13 +415,38 @@ button,
   }
 }
 
+.titles-bg {
+  position: relative;
+  font-size: 12.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.02);
+  transform: translateX(-50px);
+  display: inline-block;
+}
+.titles h2 {
+  position: absolute;
+  top: 1.5625rem;
+  right: -0.625rem;
+  font-size: 5rem;
+  color: #FFFFFF;
+}
+.titles h2::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  background-color: #4AF6CD;
+  width: 5rem;
+  height: 0.0625rem;
+  right: 0;
+  top: 0.5rem;
+}
+
 .info-subtitle {
   color: #979797;
   font-size: 1.375rem;
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: 0.458125rem;
-  text-transform: uppercase;
   position: relative;
   display: inline-block;
 }
@@ -501,7 +477,6 @@ button,
   color: #FFFFFF;
   font-weight: 800;
   line-height: 1.075;
-  text-transform: uppercase;
 }
 
 .info-title {
@@ -510,6 +485,18 @@ button,
 
 .info-text {
   font-size: 2.5rem;
+}
+.info-text--margin-top {
+  margin-top: 1.5625rem;
+}
+.info-text span {
+  font-weight: 100;
+}
+
+.subtitle {
+  text-align: right;
+  padding-right: 5rem;
+  margin-top: -5.375rem;
 }
 
 .slider-dots {
@@ -539,6 +526,7 @@ button,
 }
 .slider-dots__name {
   font-weight: 300;
+  text-transform: capitalize;
 }
 
 .menu__item {
@@ -561,4 +549,96 @@ button,
   line-height: 1.1666666667;
   letter-spacing: 0.1875rem;
   color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+.surf {
+  padding: 10rem 0 13.125rem;
+  background-image: url(../images/surf/surf-map.png);
+  background-repeat: no-repeat;
+  background-position: right 200px;
+  background-size: auto;
+}
+.surf__slider {
+  padding-top: 6.875rem;
+}
+.surf__slider .slick-arrow {
+  top: 3.125rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+.surf__box {
+  max-width: 24.375rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.surf__box-inner {
+  min-height: 46.875rem;
+  background-color: rgba(28, 33, 33, 0.85);
+  position: relative;
+}
+.surf__box-inner-title {
+  padding: 4.5rem 0 0 2.5rem;
+  width: 9.4375rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 0.9;
+}
+.surf__box-inner-location {
+  font-size: 1.125rem;
+  line-height: 1.2222222222;
+  letter-spacing: 0.5rem;
+  transform: rotate(-90deg);
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 2.5rem;
+  bottom: 5rem;
+  white-space: nowrap;
+}
+.surf__box-inner-location span {
+  font-weight: 100;
+}
+.surf__box-inner-btn {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.surf__box.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active .surf__box-inner {
+  background-color: transparent;
+}
+
+.btn {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 0.9;
+}
+.btn span {
+  position: relative;
+  display: inline-block;
+  padding: 1.0625rem 3.5625rem 0.9375rem 1.0625rem;
+  background-color: #4AF6CD;
+  margin-left: 1.1875rem;
+}
+.btn span::before {
+  position: absolute;
+  content: "";
+  width: 1.25rem;
+  height: 0.0625rem;
+  background-color: #FFFFFF;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -0.625rem;
+}
+.btn span::after {
+  position: absolute;
+  content: url(../images/icons/arrow-right.svg);
+  width: 1.5625rem;
+  height: 1.3125rem;
+  top: 37%;
+  transform: translateY(-50%);
+  right: 1.0625rem;
 }/*# sourceMappingURL=style.css.map */
