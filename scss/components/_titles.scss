@@ -1,19 +1,15 @@
 .titles {
-  &-bg {
-    position: relative;
-    font-size: rem(200);
-    font-weight: 800;
-    color: rgba($white, .02);
-    transform: translateX(-50px);
-    display: inline-block;
-  }
+  position: relative;
+  width: 467px;
+  outline: 1px solid green;
 
   h2 {
     position: absolute;
-    top: rem(25);
-    right: rem(-10);
+    top: rem(16);
+    right: -23%;
     font-size: rem(80);
-    // line-height: 1.95;
+    font-weight: 800;
+    line-height: 1.95;
     color: $white;
 
     &::before {
@@ -27,6 +23,19 @@
       top: rem(8);
     }
   }
+
+  &-bg {
+    position: absolute;
+    top: rem(-30);
+    left: rem(-70);
+    font-size: rem(200);
+    font-weight: 800;
+    color: rgba($white, .02);
+    transform: translateX(-50px);
+    display: inline-block;
+  }
+
+
 }
 
 
@@ -92,4 +101,10 @@
   span {
     font-weight: 100;
   }
+}
+
+.subtitle {
+  text-align: right;
+  padding-right: rem(80);
+  margin-top: rem(50);
 }
