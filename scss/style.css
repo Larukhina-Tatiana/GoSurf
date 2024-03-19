@@ -417,12 +417,16 @@ body {
 
 .titles {
   position: relative;
+  width: 467px;
+  outline: 1px solid green;
 }
 .titles h2 {
-  position: relative;
-  display: inline-block;
-  left: 14.375rem;
+  position: absolute;
+  top: 1rem;
+  right: -23%;
   font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.95;
   color: #FFFFFF;
 }
 .titles h2::before {
@@ -438,7 +442,7 @@ body {
 .titles-bg {
   position: absolute;
   top: -1.875rem;
-  left: -0.3125rem;
+  left: -4.375rem;
   font-size: 12.5rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.02);
@@ -452,6 +456,7 @@ body {
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: 0.458125rem;
+  text-transform: uppercase;
   position: relative;
   display: inline-block;
 }

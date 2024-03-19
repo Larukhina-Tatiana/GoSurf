@@ -1,12 +1,19 @@
 .titles {
-  position: relative;
+  &-bg {
+    position: relative;
+    font-size: rem(200);
+    font-weight: 800;
+    color: rgba($white, .02);
+    transform: translateX(-50px);
+    display: inline-block;
+  }
 
   h2 {
-    position: relative;
-    display: inline-block;
-    // top: rem(0);
-    left: rem(230);
+    position: absolute;
+    top: rem(25);
+    right: rem(-10);
     font-size: rem(80);
+    // line-height: 1.95;
     color: $white;
 
     &::before {
@@ -20,17 +27,6 @@
       top: rem(8);
     }
   }
-
-  &-bg {
-    position: absolute;
-    top: rem(-30);
-    left: rem(-5);
-    font-size: rem(200);
-    font-weight: 800;
-    color: rgba($white, .02);
-    transform: translateX(-50px);
-    display: inline-block;
-  }
 }
 
 
@@ -40,6 +36,7 @@
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: rem(7.33);
+  text-transform: uppercase;
   position: relative;
   display: inline-block;
 
@@ -95,10 +92,4 @@
   span {
     font-weight: 100;
   }
-}
-
-.subtitle {
-  text-align: right;
-  padding-right: rem(80);
-  margin-top: rem(50);
 }
