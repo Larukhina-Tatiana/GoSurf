@@ -1,15 +1,17 @@
 .surf {
-  padding: rem(160) 0 rem(120);
+  padding: rem(135) 0 rem(120);
   background-image: url(../images/surf/surf-map.png);
   background-repeat: no-repeat;
   background-position: right 200px;
   background-size: auto;
+  position: relative;
 
 
 
   &__slider {
     padding-top: rem(110);
     position: relative;
+    height: rem(953);
 
     .slick-arrow {
       top: rem(50);

@@ -2,11 +2,12 @@
   position: relative;
   width: 467px;
   outline: 1px solid green;
+  text-align: right;
 
   h2 {
-    position: absolute;
-    top: rem(16);
-    right: -23%;
+    position: relative;
+    top: rem(-1);
+    right: rem(110);
     font-size: rem(80);
     font-weight: 800;
     line-height: 1.95;
@@ -20,19 +21,20 @@
       width: rem(80);
       height: rem(1);
       right: 0;
-      top: rem(8);
+      top: rem(24);
     }
   }
 
   &-bg {
     position: absolute;
-    top: rem(-30);
+    top: rem(56);
     left: rem(-70);
     font-size: rem(200);
     font-weight: 800;
     color: rgba($white, .02);
     transform: translateX(-50px);
     display: inline-block;
+    line-height: calc(156/200);
   }
 
 

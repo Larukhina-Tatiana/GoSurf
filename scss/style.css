@@ -419,11 +419,12 @@ body {
   position: relative;
   width: 467px;
   outline: 1px solid green;
+  text-align: right;
 }
 .titles h2 {
-  position: absolute;
-  top: 1rem;
-  right: -23%;
+  position: relative;
+  top: -0.0625rem;
+  right: 6.875rem;
   font-size: 5rem;
   font-weight: 800;
   line-height: 1.95;
@@ -437,17 +438,18 @@ body {
   width: 5rem;
   height: 0.0625rem;
   right: 0;
-  top: 0.5rem;
+  top: 1.5rem;
 }
 .titles-bg {
   position: absolute;
-  top: -1.875rem;
+  top: 3.5rem;
   left: -4.375rem;
   font-size: 12.5rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.02);
   transform: translateX(-50px);
   display: inline-block;
+  line-height: 0.78;
 }
 
 .info-subtitle {
@@ -563,15 +565,17 @@ body {
 }
 
 .surf {
-  padding: 10rem 0 7.5rem;
+  padding: 8.4375rem 0 7.5rem;
   background-image: url(../images/surf/surf-map.png);
   background-repeat: no-repeat;
   background-position: right 200px;
   background-size: auto;
+  position: relative;
 }
 .surf__slider {
   padding-top: 6.875rem;
   position: relative;
+  height: 59.5625rem;
 }
 .surf__slider .slick-arrow {
   top: 3.125rem;
