@@ -81,4 +81,13 @@ $(function () {
     asNavFor: ".surf__slider",
     focusOnSelect: true,
   });
+
+  $(".travel__slider").slick({
+    infinite: true,
+    fade: true,
+    nextArrow:
+      '<button class="slick-arrow slick-next" aria-label="Next"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-right-next"></svg></use></button>',
+    prevArrow:
+      '<button class="slick-arrow slick-prev" aria-label="Previous"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-left-prev"></svg></use></button>',
+  });
 });

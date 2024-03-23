@@ -1,0 +1,19 @@
+.travel {
+  padding: rem(97) 0 rem(265) 0;
+  background-image: url(../images/travel/travel-bg.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  &__title {
+    width: 672px;
+
+    h2 {
+      right: rem(230);
+    }
+  }
+
+  & .btn {
+    text-align: center;
+  }
+}

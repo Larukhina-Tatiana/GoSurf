@@ -418,7 +418,6 @@ body {
 .titles {
   position: relative;
   width: 467px;
-  outline: 1px solid green;
   text-align: right;
 }
 .titles h2 {
@@ -505,12 +504,6 @@ body {
   font-weight: 100;
 }
 
-.subtitle {
-  text-align: right;
-  padding-right: 5rem;
-  margin-top: 3.125rem;
-}
-
 .slider-dots {
   position: absolute;
   right: 5rem;
@@ -571,6 +564,11 @@ body {
   background-position: right 200px;
   background-size: auto;
   position: relative;
+}
+.surf__subtitle {
+  text-align: right;
+  padding-right: 5rem;
+  margin-top: 3.125rem;
 }
 .surf__slider {
   padding-top: 6.875rem;
@@ -849,4 +847,88 @@ body {
   top: 37%;
   transform: translateY(-50%);
   right: 1.0625rem;
+}
+
+.travel {
+  padding: 6.0625rem 0 16.5625rem 0;
+  background-image: url(../images/travel/travel-bg.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.travel__title {
+  width: 672px;
+}
+.travel__title h2 {
+  right: 14.375rem;
+}
+.travel .btn {
+  text-align: center;
+}
+
+.travel-slider__subtitle {
+  text-align: right;
+}
+.travel-slider__head {
+  min-height: 48.8125rem;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.travel-slider__detailing {
+  height: 20rem;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 10rem 0 0 8.25rem;
+  margin-top: -16.875rem;
+}
+.travel-slider__subtitle {
+  padding: 5rem 5rem 0 0;
+}
+.travel-slider__detailing-subtitle {
+  text-align: left;
+}
+.travel-slider__detailing-info-text {
+  display: flex;
+  align-items: last baseline;
+  gap: 1.625rem;
+}
+.travel-slider__info {
+  margin-top: 5.625rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4.125rem;
+}
+.travel-slider__info-item {
+  display: flex;
+  min-height: 12.5rem;
+  position: relative;
+}
+.travel-slider__info-descr {
+  position: absolute;
+  font-size: 1.125rem;
+  line-height: 1.2222222222;
+  letter-spacing: 0.5rem;
+  rotate: -90deg;
+  color: #979797;
+  top: 5.5625rem;
+  left: -10rem;
+  width: 100%;
+  white-space: nowrap;
+  text-align: right;
+}
+.travel-slider__info-meaning {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 0.9;
+}
+.travel-slider__info-meaning span {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 2.5714285714;
+  letter-spacing: 0.3125rem;
+  text-align: right;
+  color: #979797;
 }/*# sourceMappingURL=style.css.map */
