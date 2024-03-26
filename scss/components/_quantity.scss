@@ -1,0 +1,56 @@
+.quantity {
+  display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: rem(45);
+  height: rem(42);
+  display: block;
+  border: none;
+  background-color: transparent;
+  color: $white;
+  font-size: rem(40);
+  font-weight: 800;
+  line-height: calc(36/40);
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: static;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  width: rem(20);
+  height: rem(20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: rem(45);
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  right: rem(0);
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  right: rem(25);
+}

@@ -1,0 +1,26 @@
+.footer {
+  padding: rem(284) 0 rem(34) 0;
+  text-align: center;
+
+  &__btn {
+    margin-bottom: rem(27);
+
+    span {
+      padding-right: rem(18);
+    }
+
+    ::after {
+      display: none;
+    }
+  }
+
+
+
+  &__copy {
+    font-size: rem(12);
+    font-weight: 100;
+    line-height: calc(14/12);
+    letter-spacing: rem(1.05);
+    color: $gray;
+  }
+}

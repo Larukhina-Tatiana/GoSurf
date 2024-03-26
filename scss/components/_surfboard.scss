@@ -1,0 +1,99 @@
+.surfboard {
+  position: relative;
+
+  &-box {
+    position: absolute;
+
+    &__position1 {
+      top: 30%;
+      right: rem(36);
+
+      .surfboard-box__content {
+        padding: 0 0 0 rem(104);
+        left: rem(30);
+        text-align: left;
+
+        &::before {
+          left: 0;
+        }
+      }
+    }
+
+    &__position2 {
+      top: 45%;
+      left: 0;
+    }
+
+    &__position3 {
+      top: 88%;
+      left: rem(52);
+    }
+
+
+    &__circle {
+      position: relative;
+      width: rem(20);
+      height: rem(20);
+      border-radius: 50%;
+      background-color: $white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+
+      &-row {
+        position: absolute;
+        background-color: $accent;
+        width: rem(12);
+        height: rem(2);
+        @include transition ($transition-property: transform);
+
+        & + & {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+
+    &__content {
+      position: absolute;
+      opacity: 0;
+      width: rem(360);
+      font-size: rem(24);
+      font-weight: 800;
+      line-height: 1;
+      text-align: end;
+      padding: 0 rem(104) 0 0;
+      right: rem(30);
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include transition ($transition-property: opacity);
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        content: '';
+        background-color: $gray;
+        width: rem(80);
+        height: rem(1);
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+      }
+
+
+    }
+  }
+
+  .surfboard-box__circle.minus {
+    .surfboard-box__circle-row + .surfboard-box__circle-row {
+      transform: rotate(0deg);
+    }
+  }
+
+  .surfboard-box__circle.minus + .surfboard-box__content {
+    opacity: 1;
+  }
+}

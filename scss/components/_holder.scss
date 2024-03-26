@@ -1,0 +1,14 @@
+.holder {
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  & .btn {
+    text-align: center;
+  }
+
+  .slick-arrow {
+    top: rem(200);
+    color: rgba($white, .25);
+  }
+}

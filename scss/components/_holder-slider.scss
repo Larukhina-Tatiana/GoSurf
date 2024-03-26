@@ -1,4 +1,4 @@
-.travel-slider {
+.holder-slider {
 
   &__subtitle {
     text-align: right;
@@ -9,17 +9,11 @@
     background-position: top left;
     background-repeat: no-repeat;
     background-size: auto;
-    // border-top-right-radius: 50%;
-    // border-bottom-right-radius: 50%;
-    // filter: blur(2px);
-    // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    // opacity: 0.9;
-    // background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(5, 0, 2, 1) 35%, rgba(0, 212, 255, 1) 100%);
 
   }
 
   &__detailing {
-    height: rem(320);
+    height: rem(385);
     background-position: top right;
     background-repeat: no-repeat;
     background-size: auto;
@@ -39,6 +33,10 @@
     display: flex;
     align-items: last baseline;
     gap: rem(26);
+
+    &--aic {
+      align-items: center;
+    }
   }
 
   &__info {

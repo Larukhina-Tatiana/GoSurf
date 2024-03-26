@@ -1,0 +1,13 @@
+.sleep {
+  padding: rem(97) 0 rem(265) 0;
+  background-image: url(../images/sleep/sleep-bg.png);
+
+
+  &__title {
+    width: rem(550);
+
+    h2 {
+      right: rem(135);
+    }
+  }
+}
