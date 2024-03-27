@@ -1,8 +1,7 @@
 .menu {
 
   &__item {
-    @include adaptivevalue(margin-bottom, 27, 15, 1200, 320, 1);
-    margin-bottom: rem(37);
+    @include adaptivevalue(margin-bottom, 38, 25, 1920, 320, 1);
   }
 
   &__link {
@@ -17,5 +16,34 @@
     letter-spacing: rem(3);
     color: $white;
     text-transform: capitalize;
+    @include transition ($transition-property: color);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accent;
+
+        &-svg {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  // @media screen and (width < 1365.99px) {
+  //   &__list {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: rem(15);
+  //     text-align: center;
+  //   }
+
+  //   &__link {
+  //     padding: rem(15);
+  //   }
+  // }
+  @media screen and (width < 1200.99px) {
+    &__link-svg {
+      width: rem(24);
+    }
   }
 }

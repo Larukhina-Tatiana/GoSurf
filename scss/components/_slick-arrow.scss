@@ -1,0 +1,36 @@
+.slick-arrow {
+  color: $gray;
+  position: absolute;
+  top: rem(40);
+  z-index: 5;
+
+  svg {
+    @include transition ($transition-property: color);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      svg {
+        color: $accent;
+      }
+    }
+  }
+}
+
+.slick-next {
+  right: rem(80);
+}
+
+.slick-prev {
+  right: rem(125);
+}
+
+@media screen and (width < 1365.99px) {
+  .slick-next {
+    right: rem(16);
+  }
+
+  .slick-prev {
+    right: rem(61);
+  }
+}

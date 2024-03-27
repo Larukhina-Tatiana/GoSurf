@@ -115,20 +115,7 @@ body {
 
 
 
-.slick-arrow {
-  svg {
-    @include transition ($transition-property: color);
 
-  }
-
-  @media (any-hover: hover) {
-    &:hover {
-      svg {
-        color: $accent;
-      }
-    }
-  }
-}
 
 // ul.products__list>li.products__item*4>div.products__wrapp>img.products__item-img[src=images/products-$.jpg]+p.products__item-price{10$}+h3.title-h3+p.products__item-text+button.products__button-button{Купити}
 // .wrapper {

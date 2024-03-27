@@ -4,7 +4,9 @@
 
   &__title {
     position: absolute;
-    font-size: rem(200);
+    @include adaptivevalue(font-size, 200, 130, 1920, 1440, 1);
+    @include adaptivevalue(line-height, 156, 108, 1920, 1440, 1);
+    @include adaptivevalue(left, 0, 124, 1920, 1440, 1);
     font-weight: 800;
     line-height: calc(156/200);
     color: $white;
@@ -18,6 +20,10 @@
     top: rem(-65);
     right: 0;
     z-index: 3;
+
+    svg {
+      @include adaptivevalue(width, 1001, 320, 1200, 320, 1);
+    }
   }
 
   &__line-animation {
@@ -37,22 +43,39 @@
     top: 0;
     left: 0;
     z-index: 5;
-    width: rem(168);
-    border-right: rem(1) solid $gray;
+    // width: rem(168);
+    width: auto;
     height: 100vh;
     text-align: center;
+
+    // @media screen and (width > 1365.99px) {
+    border-right: rem(1) solid $gray;
+    // }
   }
+
+
 
   &__logo {
     cursor: pointer;
 
-    &:not(:last-child) {
-      @include adaptivevalue(margin-bottom, 40, 20, 1200, 320, 1);
+    @media screen and (width > 1365.99px) {
+      &:not(:last-child) {
+        @include adaptivevalue(margin-bottom, 40, 20, 1920, 1440, 1);
+      }
+    }
+
+    &-svg {
+      // margin: 0 auto;
+      // width: rem(168);
+      @include adaptivevalue(width, 168, 50, 1440, 320, 1);
+
     }
   }
 
   &__search {
-    margin-bottom: rem(20);
+    @media screen and (width > 1365.99px) {
+      @include adaptivevalue(margin-bottom, 30, 20, 1920, 1440, 1);
+    }
 
     @media (any-hover: hover) {
       &:hover {
@@ -64,17 +87,21 @@
   }
 
   &__date {
-    margin-bottom: rem(20);
+    @include adaptivevalue(margin-bottom, 20, 10, 1920, 1440, 1);
+
 
     &-num {
-      font-size: rem(72);
+      @include adaptivevalue(font-size, 72, 22, 1920, 320, 1);
       line-height: calc(64/72);
       font-weight: 800;
-      margin-bottom: rem(10);
+
+      @media screen and (width > 1365.99px) {
+        @include adaptivevalue(margin-bottom, 10, 5, 1920, 1440, 1);
+      }
     }
 
     span {
-      font-size: rem(16);
+      @include adaptivevalue(font-size, 16, 14, 1920, 1440, 1);
       line-height: calc(19/16);
       font-weight: 300;
     }
@@ -96,9 +123,10 @@
   }
 
   &__arrows {
+    color: $white;
     position: absolute;
+    @include adaptivevalue(left, 210, 187, 1920, 1440, 1);
     bottom: rem(30);
-    left: rem(210);
     z-index: 3;
 
     &-link {
@@ -114,52 +142,57 @@
     }
   }
 
+  .slick-arrow {
+    color: $white;
+  }
+
 
 
   &__slider-item {
     position: relative;
     height: 100vh;
     background-color: #000;
-    background-image: (radial-gradient(62.00% 62.00% at 43% 49%, rgba(34, 34, 34, 0.43), rgb(15, 15, 15) 100%), url(../images/heder/hero-bg-1@1x.jpg));
+    // background-image: (radial-gradient(62.00% 62.00% at 43% 49%, rgba(34, 34, 34, 0.43), rgb(15, 15, 15) 100%), url(../images/heder/hero-bg-1@1x.jpg));
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (-o-mini-device-pixel-ratio: 2/1),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-      background-image: (radial-gradient(62.00% 62.00% at 43% 49%, rgba(34, 34, 34, 0.43), rgb(15, 15, 15) 100%), url(../images/heder/hero-bg-1@2x.jpg));
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    @media screen and (min-device-pixel-ratio: 3),
-    screen and (-webkit-min-device-pixel-ratio: 3),
-    screen and (-o-mini-device-pixel-ratio: 3/1),
-    screen and (min-resolution: 228dpi),
-    screen and (min-resolution: 3dppx) {
-      background-image: (radial-gradient(62.00% 62.00% at 43% 49%, rgba(34, 34, 34, 0.43), rgb(15, 15, 15) 100%), url(../images/heder/hero-bg-1@3x.jpg));
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
   }
-}
 
-.slick-arrow {
-  color: $gray;
-  position: absolute;
-  top: rem(40);
-  z-index: 5;
-}
+  @media screen and (width < 1365.99px) {
+    &__title {
+      display: none;
+    }
 
-.slick-next {
-  right: rem(80);
-}
+    &__arrows {
+      left: rem(20);
+    }
 
-.slick-prev {
-  right: rem(125);
+    // &__aside {
+    //   position: absolute;
+    //   width: auto;
+    //   // height: 100%;
+    //   height: auto;
+    //   display: flex;
+    //   align-items: self-start;
+    // }
+
+    &__logo {
+      flex-shrink: 0;
+    }
+
+    &__search {
+      padding: rem(30) rem(15) rem(15);
+    }
+
+    &__date {
+      padding: rem(15);
+    }
+
+    &__lacation {
+      padding-top: rem(30);
+    }
+
+  }
+
+  @media screen and (width < .99px) {}
 }
