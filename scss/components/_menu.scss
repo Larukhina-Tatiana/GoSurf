@@ -1,7 +1,43 @@
 .menu {
 
+  &__mobile {
+    cursor: pointer;
+    width: rem(90);
+    padding: rem(20);
+    background-color: rgba($gray, .25);
+    border-radius: rem(5);
+    border: 1px solid $accent;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // right: rem(20);
+    // top: rem(40);
+    // z-index: 10;
+    line-height: 1;
+
+    &-line {
+      display: inline-block;
+      width: 100%;
+      height: rem(5);
+      background-color: $accent;
+      border-radius: rem(3);
+      margin-bottom: rem(5);
+    }
+
+    @include transition ($transition-property: scale);
+
+    @media (any-hover: hover) {
+      &:hover {
+        scale: 1.2;
+      }
+    }
+  }
+
+
+
   &__item {
-    @include adaptivevalue(margin-bottom, 38, 25, 1920, 320, 1);
+    margin-bottom: clamp(1.69rem, calc(1.51rem + 0.89vw), 2.31rem);
+    // @include adaptivevalue(margin-bottom, 37, 25, 1920, 320, 1);
   }
 
   &__link {
@@ -16,11 +52,12 @@
     letter-spacing: rem(3);
     color: $white;
     text-transform: capitalize;
-    @include transition ($transition-property: color);
+    @include transition ($transition-property: (color, scale));
 
     @media (any-hover: hover) {
       &:hover {
         color: $accent;
+        scale: 1.2;
 
         &-svg {
           color: $accent;
@@ -41,9 +78,17 @@
   //     padding: rem(15);
   //   }
   // }
-  @media screen and (width < 1200.99px) {
-    &__link-svg {
-      width: rem(24);
-    }
-  }
+
+
+  // @media screen and (width < 640.99px) {
+
+
+  //   &__link {
+  //     margin-bottom: rem(10);
+  //   }
+
+  //   &__item {
+  //     margin-bottom: rem(10);
+  //   }
+  // }
 }

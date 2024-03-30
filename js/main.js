@@ -1,4 +1,37 @@
 $(function () {
+  let currentDate = new Date();
+  // console.log(currentDate.getMonth() + 1);
+  var date = currentDate.getDate();
+  document.getElementById("date").innerHTML = date;
+  var month = currentDate.getMonth() + 1;
+  document.getElementById("month").innerHTML = month;
+  var year = currentDate.getFullYear();
+  document.getElementById("year").innerHTML = year;
+  // console.log(currentDate.getFullYear());
+  // console.log(currentDate.getDate());
+  // document.getElementById("dateField").valueAsDate = new Date();
+
+  // $(document).ready(function () {
+  //   var today = new Date(),
+  //     day = today.getDate().toString().padStart(2, "0"),
+  //     month = (today.getMonth() + 1).toString().padStart(2, "0"),
+  //     year = today.getFullYear();
+  //   $("#datePicker").val(`${year}-${month}-${day}`);
+  // });
+
+  var timeElement = document.getElementById("currentTime");
+  setInterval(function () {
+    var currentTime = new Date();
+    timeElement.textContent = currentTime.toLocaleTimeString();
+  }, 1000);
+
+  $(".menu__mobile").on("click", function () {
+    $(".menu__mobile").toggleClass("menu--open");
+  });
+  $(".menu__mobile").on("click", function () {
+    $(".header__menu").toggleClass("menu--open");
+  });
+
   $(".header__slider").slick({
     infinite: true,
     fade: true,
