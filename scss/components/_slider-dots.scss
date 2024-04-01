@@ -1,21 +1,22 @@
 .slider-dots {
   position: absolute;
-  right: rem(80);
+  // right: rem(80);
+  right: rem(0);
   bottom: rem(40);
-  max-width: rem(920);
+  max-width: clamp(12.5rem, calc(-0.54rem + 65.18vw), 58.13rem);
   width: 100%;
   color: $white;
-  counter-reset: number;
 
   &__item {
     position: relative;
   }
 
   &__box {
-    width: rem(200);
+    // width: rem(200);
+    width: 22%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     border-top: rem(4) solid $accent;
     padding-top: rem(6);
   }
@@ -29,5 +30,9 @@
   &__name {
     font-weight: 300;
     text-transform: capitalize;
+  }
+
+  @media screen and (width < 1023.99px) {
+    display: none;
   }
 }

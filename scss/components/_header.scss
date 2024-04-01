@@ -2,29 +2,25 @@
   position: relative;
   height: 100vh;
 
-  &__menu {
-    display: none;
-    transform: translateY(-120%);
 
-    & .menu--open {
-      display: block;
-      transform: translateY(0%);
-      position: absolute;
-      background-color: $bacground;
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
-      transition: 0.3s ease;
-      z-index: 12;
-      top: 30%;
-      left: 112%;
 
+  @keyframes opac {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
     }
   }
+
+
 
   &__title {
     position: absolute;
     // @include adaptivevalue(font-size, 200, 130, 1920, 320, 1);
-    font-size: clamp(8.13rem, calc(7.25rem + 4.38vw), 12.5rem);
-    @include adaptivevalue(line-height, 156, 108, 1920, 320, 1);
+    font-size: clamp(7.5rem, calc(6.07rem + 7.14vw), 12.5rem);
+    line-height: clamp(6.75rem, calc(5.89rem + 4.29vw), 9.75rem);
     // @include adaptivevalue(left, 0, 124, 1920, 1440, 1);
     font-weight: 800;
     color: $white;
@@ -132,7 +128,7 @@
     line-height: calc(14/12);
     letter-spacing: rem(1.05);
     text-transform: capitalize;
-    margin-bottom: clamp(0.63rem, calc(0rem + 3.13vw), 2.81rem);
+    // margin-bottom: clamp(0.63rem, calc(0rem + 3.13vw), 2.81rem);
 
     &::before {
       content: url(../images/icons/location.svg);
@@ -145,8 +141,8 @@
   &__arrows {
     color: $white;
     position: absolute;
-    @include adaptivevalue(left, 210, 187, 1920, 1440, 1);
-    bottom: rem(30);
+    left: clamp(11.69rem, calc(11.28rem + 2.05vw), 13.13rem);
+    bottom: clamp(0.88rem, calc(0.59rem + 1.43vw), 1.88rem);
     z-index: 3;
 
     &-link {
@@ -176,41 +172,28 @@
     background-size: cover;
   }
 
-  // @media screen and (width < 1365.99px) {
-  //   // &__title {
-  //   //   display: none;
-  //   // }
+  @media screen and (width < 1319.99px) {
+    &__menu {
+      display: none;
+      animation: opac .57s;
 
-  //   &__arrows {
-  //     left: rem(20);
-
-  //   }
-
-  //   &__aside {
-  //     //   position: absolute;
-  //     width: auto;
-
-  //     //   display: flex;
-  //     //   align-items: self-start;
-  //   }
-
-  //   &__logo {
-  //     flex-shrink: 0;
-  //   }
-
-  //   &__search {
-  //     padding: rem(30) rem(15) rem(15);
-  //   }
-
-  //   &__date {
-  //     padding: rem(15);
-  //   }
-
-  //   &__lacation {
-  //     padding-top: rem(30);
-  //   }
-
-  // }
+      &.menu--open {
+        position: absolute;
+        display: block;
+        // transform: translateX(0%);
+        padding: rem(15);
+        background-color: rgba($black, .65);
+        border: rem(1) solid $accent;
+        border-radius: rem(5);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+        // transition: 0.3s ease;
+        z-index: 12;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 112%;
+      }
+    }
+  }
 
 
 }

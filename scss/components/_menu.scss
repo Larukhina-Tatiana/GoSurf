@@ -1,44 +1,16 @@
 .menu {
 
   &__mobile {
-    cursor: pointer;
-    width: rem(90);
-    padding: rem(20);
-    background-color: rgba($gray, .25);
-    border-radius: rem(5);
-    border: 1px solid $accent;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // right: rem(20);
-    // top: rem(40);
-    // z-index: 10;
-    line-height: 1;
-
-    &-line {
-      display: inline-block;
-      width: 100%;
-      height: rem(5);
-      background-color: $accent;
-      border-radius: rem(3);
-      margin-bottom: rem(5);
-    }
-
-    @include transition ($transition-property: scale);
-
-    @media (any-hover: hover) {
-      &:hover {
-        scale: 1.2;
-      }
-    }
+    display: none;
   }
 
-
-
-  &__item {
-    margin-bottom: clamp(1.69rem, calc(1.51rem + 0.89vw), 2.31rem);
-    // @include adaptivevalue(margin-bottom, 37, 25, 1920, 320, 1);
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: rem(37);
   }
+
 
   &__link {
     display: flex;
@@ -66,6 +38,45 @@
     }
   }
 
+  @media screen and (width < 1319.99px) {
+    &__mobile {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      width: rem(55);
+      padding: rem(10);
+      background-color: rgba($gray, .25);
+      border-radius: rem(5);
+      border: 1px solid $accent;
+      line-height: 0;
+
+      &-line {
+        display: inline-block;
+        width: 100%;
+        height: rem(5);
+        background-color: $accent;
+        border-radius: rem(3);
+
+        &:not(:last-child) {
+          margin-bottom: rem(5);
+        }
+      }
+
+      @include transition ($transition-property: scale);
+
+      @media (any-hover: hover) {
+        &:hover {
+          scale: 1.1;
+        }
+      }
+    }
+
+    &__list {
+      height: 70vh;
+      gap: 0;
+    }
+  }
+
   // @media screen and (width < 1365.99px) {
   //   &__list {
   //     display: flex;
@@ -79,16 +90,4 @@
   //   }
   // }
 
-
-  // @media screen and (width < 640.99px) {
-
-
-  //   &__link {
-  //     margin-bottom: rem(10);
-  //   }
-
-  //   &__item {
-  //     margin-bottom: rem(10);
-  //   }
-  // }
 }
