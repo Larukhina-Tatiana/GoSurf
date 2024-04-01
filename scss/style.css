@@ -387,7 +387,7 @@ body {
   background-position: center;
   background-size: cover;
 }
-@media screen and (width < 1319.99px) {
+@media screen and (width < 1365.99px) {
   .header__menu {
     display: none;
     animation: opac 0.57s;
@@ -624,7 +624,7 @@ body {
     color: #4AF6CD;
   }
 }
-@media screen and (width < 1319.99px) {
+@media screen and (width < 1365.99px) {
   .menu__mobile {
     position: relative;
     display: block;
@@ -649,12 +649,12 @@ body {
     margin-bottom: 0.3125rem;
   }
 }
-@media screen and (width < 1319.99px) and (any-hover: hover) {
+@media screen and (width < 1365.99px) and (any-hover: hover) {
   .menu__mobile:hover {
     scale: 1.1;
   }
 }
-@media screen and (width < 1319.99px) {
+@media screen and (width < 1365.99px) {
   .menu__list {
     height: 70vh;
     gap: 0;
