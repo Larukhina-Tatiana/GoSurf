@@ -353,6 +353,7 @@ body {
   line-height: 1.1666666667;
   letter-spacing: 0.065625rem;
   text-transform: capitalize;
+  margin-bottom: 2.8125rem;
 }
 .header__location::before {
   content: url(../images/icons/location.svg);

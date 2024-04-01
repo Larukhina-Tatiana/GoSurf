@@ -2,8 +2,6 @@
   position: relative;
   height: 100vh;
 
-
-
   @keyframes opac {
     from {
       opacity: 0;
@@ -13,8 +11,6 @@
       opacity: 1;
     }
   }
-
-
 
   &__title {
     position: absolute;
@@ -128,7 +124,7 @@
     line-height: calc(14/12);
     letter-spacing: rem(1.05);
     text-transform: capitalize;
-    // margin-bottom: clamp(0.63rem, calc(0rem + 3.13vw), 2.81rem);
+    margin-bottom: rem(45);
 
     &::before {
       content: url(../images/icons/location.svg);
