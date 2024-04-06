@@ -1,109 +1,76 @@
 $(function () {
-  let currentDate = new Date();
-  // console.log(currentDate.getMonth() + 1);
-  var date = currentDate.getDate();
-  document.getElementById("date").innerHTML = date;
-  var month = currentDate.getMonth() + 1;
-  document.getElementById("month").innerHTML = month;
-  var year = currentDate.getFullYear();
-  document.getElementById("year").innerHTML = year;
-  // console.log(currentDate.getFullYear());
-  // console.log(currentDate.getDate());
-  // document.getElementById("dateField").valueAsDate = new Date();
+  // let currentDate = new Date();
+  // // console.log(currentDate.getMonth() + 1);
+  // var date = currentDate.getDate();
+  // document.getElementById("date").innerHTML = date;
+  // var month = currentDate.getMonth() + 1;
+  // document.getElementById("month").innerHTML = month;
+  // var year = currentDate.getFullYear();
+  // document.getElementById("year").innerHTML = year;
+  // // console.log(currentDate.getFullYear());
+  // // console.log(currentDate.getDate());
 
-  // $(document).ready(function () {
-  //   var today = new Date(),
-  //     day = today.getDate().toString().padStart(2, "0"),
-  //     month = (today.getMonth() + 1).toString().padStart(2, "0"),
-  //     year = today.getFullYear();
-  //   $("#datePicker").val(`${year}-${month}-${day}`);
+  // var timeElement = document.getElementById("currentTime");
+  // setInterval(function () {
+  //   var currentTime = new Date();
+  //   timeElement.textContent = currentTime.toLocaleTimeString();
+  // }, 1000);
+
+  // $(".menu__mobile").on("click", function () {
+  //   $(".menu__mobile").toggleClass("menu--open");
+  // });
+  // $(".menu__mobile").on("click", function () {
+  //   $(".header__menu").toggleClass("menu--open");
   // });
 
-  var timeElement = document.getElementById("currentTime");
-  setInterval(function () {
-    var currentTime = new Date();
-    timeElement.textContent = currentTime.toLocaleTimeString();
-  }, 1000);
+  // $(".header__slider").slick({
+  //   infinite: true,
+  //   fade: true,
+  //   nextArrow:
+  //     '<button class="slick-arrow slick-next" aria-label="Next"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-right-next"></use></button>',
+  //   prevArrow:
+  //     '<button class="slick-arrow slick-prev" aria-label="Previous"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-left-prev"></use></button>',
+  //   asNavFor: ".slider-dots",
+  // });
 
-  $(".menu__mobile").on("click", function () {
-    $(".menu__mobile").toggleClass("menu--open");
-  });
-  $(".menu__mobile").on("click", function () {
-    $(".header__menu").toggleClass("menu--open");
-  });
-
-  $(".header__slider").slick({
-    infinite: true,
-    fade: true,
-    nextArrow:
-      '<button class="slick-arrow slick-next" aria-label="Next"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-right-next"></use></button>',
-    prevArrow:
-      '<button class="slick-arrow slick-prev" aria-label="Previous"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-left-prev"></use></button>',
-    asNavFor: ".slider-dots",
-  });
-
-  $(".slider-dots").slick({
-    arrows: false,
-    // slidesToShow: 4,
-    // slidesTOScroll: 4,
-    asNavFor: ".header__slider",
-  });
+  // $(".slider-dots").slick({
+  //   arrows: false,
+  //   // slidesToShow: 4,
+  //   // slidesTOScroll: 4,
+  //   asNavFor: ".header__slider",
+  // });
 
   $(".surf__slider").slick({
     centerMode: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow:
-      '<button class="slick-arrow slick-next" aria-label="Next"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-right-next"></svg></use></button>',
+      '<button class="slick-arrow slick-next" aria-label="Next"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-right-next"></use></svg></button>',
     prevArrow:
-      '<button class="slick-arrow slick-prev" aria-label="Previous"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-left-prev"></svg></use></button>',
-    // dots: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 1781,
-
-    //     settings: {
-    //       slidesToShow: 4,
-    //       slidesToScroll: 1,
-    //       dots: true,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 1511,
-    //     settings: {
-    //       slidesToShow: 6,
-    //       slidesToScroll: 6,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 1201,
-    //     settings: {
-    //       slidesToShow: 4,
-    //       slidesToScroll: 4,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 841,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 551,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 2,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 376,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
+      '<button class="slick-arrow slick-prev" aria-label="Previous"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-left-prev"></use></svg></button>',
+    responsive: [
+      {
+        breakpoint: 1210,
+        settings: {
+          centerMode: false,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 981,
+        settings: {
+          centerMode: false,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 671,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
     asNavFor: ".surf__map-slider",
   });
 
@@ -113,6 +80,26 @@ $(function () {
     slidesToScroll: 1,
     asNavFor: ".surf__slider",
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1103,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 981,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 671,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   $(".holder__slider").slick({
