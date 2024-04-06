@@ -473,12 +473,13 @@ body {
   position: relative;
   width: 29.1875rem;
   text-align: right;
+  padding-bottom: 5rem;
 }
 .titles h2 {
   position: relative;
   top: -0.0625rem;
-  right: 6.875rem;
-  font-size: 5rem;
+  right: clamp(12.88rem, 14.59rem - 8.57vw, 6.88rem);
+  font-size: clamp(3.75rem, 3.39rem + 1.79vw, 5rem);
   font-weight: 800;
   line-height: 1.95;
   color: #FFFFFF;
@@ -496,8 +497,8 @@ body {
 .titles-bg {
   position: absolute;
   top: 3.5rem;
-  left: -4.375rem;
-  font-size: 12.5rem;
+  left: clamp(1.63rem, 3.34rem - 8.57vw, -4.37rem);
+  font-size: clamp(7.5rem, 6.07rem + 7.14vw, 12.5rem);
   font-weight: 800;
   color: rgba(255, 255, 255, 0.02);
   transform: translateX(-50px);
@@ -535,6 +536,11 @@ body {
 }
 .info-subtitle--right::before {
   right: 0;
+}
+@media screen and (width < 519.99px) {
+  .info-subtitle {
+    letter-spacing: normal;
+  }
 }
 
 .info-title,
@@ -663,7 +669,8 @@ body {
 }
 
 .surf {
-  padding: 8.4375rem 0 7.5rem;
+  padding-top: clamp(5.31rem, 4.42rem + 4.46vw, 8.44rem);
+  padding-bottom: clamp(0rem, -2.14rem + 10.71vw, 7.5rem);
   background-image: url(../images/surf/surf-map.png);
   background-repeat: no-repeat;
   background-position: right 200px;
@@ -672,17 +679,21 @@ body {
 }
 .surf__subtitle {
   text-align: right;
-  padding-right: 5rem;
+  padding-right: clamp(2rem, 1.14rem + 4.29vw, 5rem);
   margin-top: 3.125rem;
+  margin-bottom: 5rem;
 }
 .surf__slider {
   padding-top: 6.875rem;
   position: relative;
-  height: 59.5625rem;
+  min-height: 59.5625rem;
 }
 .surf__slider .slick-arrow {
   top: 3.125rem;
   color: rgba(255, 255, 255, 0.25);
+}
+.surf__slider .slick-list {
+  height: 59.5625rem;
 }
 .surf__slider .slick-slide:nth-child(4n+1) {
   margin-top: 2rem;
@@ -697,13 +708,13 @@ body {
   display: block;
 }
 .surf__box {
-  width: 25rem !important;
+  min-width: 25rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
   position: relative;
-  margin-left: -2.5rem;
+  margin-left: clamp(-4.06rem, -4.51rem + 2.23vw, -2.5rem);
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -852,11 +863,6 @@ body {
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media (any-hover: hover) {
-  .surf__map-content:hover {
-    scale: 1.1;
-  }
-}
 .surf__map-content::before {
   content: "";
   position: absolute;
@@ -975,6 +981,9 @@ body {
   .surf__map-content--left::before {
     left: 4.5px;
   }
+  .surf__slider .slick-list {
+    height: 46.5625rem;
+  }
 }
 @media screen and (width < 1102.99px) {
   .surf__map-slider {
@@ -988,9 +997,6 @@ body {
   .surf__map-slider .slick-list {
     min-height: 17.5rem;
   }
-  .surf .slick-track {
-    min-height: 17.5rem;
-  }
   .surf__map-dots {
     position: static;
   }
@@ -1001,6 +1007,12 @@ body {
     position: static;
     display: block;
     transform: translateX(0);
+    margin-left: 0.9375rem;
+  }
+}
+@media screen and (width < 1102.99px) and (any-hover: hover) {
+  .surf__map-content:hover {
+    scale: 1.1;
   }
   .surf__map-content--left {
     left: 0;
@@ -1008,8 +1020,26 @@ body {
   .surf__map-content::before {
     display: none;
   }
+}
+@media screen and (width < 1102.99px) {
   .slick-current .surf__map-content {
     border: 1px solid #4AF6CD;
+  }
+  .surf__slider {
+    min-height: 53.4375rem;
+  }
+}
+@media screen and (width < 719.99px) {
+  .surf__slider {
+    padding-top: 2.875rem;
+  }
+  .surf .slick-arrow {
+    top: 0.125rem;
+  }
+}
+@media screen and (width < 470.99px) {
+  .surf__map-content {
+    margin: 0 auto;
   }
 }
 

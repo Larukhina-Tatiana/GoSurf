@@ -1,5 +1,7 @@
 .surf {
-  padding: rem(135) 0 rem(120);
+  // padding: rem(135) 0 rem(120);
+  padding-top: clamp(5.31rem, calc(4.42rem + 4.46vw), 8.44rem);
+  padding-bottom: clamp(0rem, calc(-2.14rem + 10.71vw), 7.5rem);
   background-image: url(../images/surf/surf-map.png);
   background-repeat: no-repeat;
   background-position: right 200px;
@@ -8,10 +10,9 @@
 
   &__subtitle {
     text-align: right;
-    padding-right: rem(80);
+    padding-right: clamp(2rem, 1.14rem + 4.29vw, 5rem);
     margin-top: rem(50);
-
-
+    margin-bottom: rem(80);
   }
 
 
@@ -19,11 +20,16 @@
   &__slider {
     padding-top: rem(110);
     position: relative;
-    height: rem(953);
+    min-height: rem(953);
 
     .slick-arrow {
       top: rem(50);
       color: rgba($white, .25);
+    }
+
+    .slick-list {
+      height: rem(953);
+      // outline: 1px solid red;
     }
 
     .slick-slide:nth-child(4n + 1) {
@@ -46,14 +52,14 @@
   }
 
   &__box {
-    // min-width: rem(400);
-    width: rem(400) !important;
+    min-width: rem(400);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
     position: relative;
-    margin-left: rem(-40);
+    // margin-left: rem(-40);
+    margin-left: clamp(-4.06rem, calc(-4.51rem + 2.23vw), -2.5rem);
 
     @include transition ($transition-property: all);
 
@@ -232,12 +238,6 @@
     z-index: 5;
     @include transition ($transition-property: (border, scale));
 
-    @media (any-hover: hover) {
-      &:hover {
-        scale: 1.1;
-
-      }
-    }
 
     &::before {
       content: '';
@@ -388,10 +388,15 @@
         left: calc(5px - .5px);
       }
     }
+
+    &__slider {
+      .slick-list {
+        height: rem(745);
+      }
+    }
   }
 
   @media screen and (width < 1102.99px) {
-
     &__map-slider {
       background-image: none;
       max-width: 100%;
@@ -409,9 +414,6 @@
       }
     }
 
-    .slick-track {
-      min-height: rem(280);
-    }
 
     &__map-dots {
       position: static;
@@ -425,19 +427,46 @@
       position: static;
       display: block;
       transform: translateX(0);
+      margin-left: rem(15);
 
-      &--left {
-        left: 0;
-      }
+      @media (any-hover: hover) {
+        &:hover {
+          scale: 1.1;
+        }
 
-      &::before {
-        display: none;
+        &--left {
+          left: 0;
+        }
+
+        &::before {
+          display: none;
+        }
       }
     }
 
     .slick-current &__map-content {
       border: 1px solid $accent;
+    }
 
+    &__slider {
+      min-height: rem(855);
+    }
+  }
+
+  @media screen and (width < 719.99px) {
+    &__slider {
+      padding-top: rem(46);
+    }
+
+    & .slick-arrow {
+      top: rem(2);
+    }
+
+  }
+
+  @media screen and (width < 470.99px) {
+    &__map-content {
+      margin: 0 auto;
     }
   }
 }

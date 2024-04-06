@@ -52,21 +52,21 @@ $(function () {
       {
         breakpoint: 1210,
         settings: {
-          centerMode: false,
+          // centerMode: false,
           slidesToShow: 3,
         },
       },
       {
         breakpoint: 981,
         settings: {
-          centerMode: true,
+          // centerMode: true,
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 671,
+        breakpoint: 761,
         settings: {
-          centerMode: true,
+          centerMode: false,
           slidesToShow: 1,
         },
       },
@@ -91,12 +91,22 @@ $(function () {
         breakpoint: 981,
         settings: {
           slidesToShow: 2,
+          centerMode: true,
         },
       },
       {
-        breakpoint: 671,
+        breakpoint: 761,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+          // centerMode: false,
+        },
+      },
+      {
+        breakpoint: 470,
         settings: {
           slidesToShow: 1,
+          centerMode: false,
         },
       },
     ],

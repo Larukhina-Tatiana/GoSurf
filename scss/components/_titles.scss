@@ -3,12 +3,13 @@
   width: rem(467);
   // outline: 1px solid green;
   text-align: right;
+  padding-bottom: rem(80);
 
   h2 {
     position: relative;
     top: rem(-1);
-    right: rem(110);
-    font-size: rem(80);
+    right: clamp(12.88rem, calc(14.59rem + -8.57vw), 6.88rem);
+    font-size: clamp(3.75rem, calc(3.39rem + 1.79vw), 5rem);
     font-weight: 800;
     line-height: 1.95;
     color: $white;
@@ -28,8 +29,9 @@
   &-bg {
     position: absolute;
     top: rem(56);
-    left: rem(-70);
-    font-size: rem(200);
+    // left: rem(-70);
+    left: clamp(1.63rem, calc(3.34rem + -8.57vw), -4.37rem);
+    font-size: clamp(7.5rem, calc(6.07rem + 7.14vw), 12.5rem);
     font-weight: 800;
     color: rgba($white, .02);
     transform: translateX(-50px);
@@ -79,6 +81,10 @@
     &::before {
       right: 0;
     }
+  }
+
+  @media screen and (width < 519.99px) {
+    letter-spacing: normal;
   }
 }
 
