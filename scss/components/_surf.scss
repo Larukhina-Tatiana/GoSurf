@@ -47,7 +47,7 @@
 
   &__box {
     // min-width: rem(400);
-    width: rem(400);
+    width: rem(400) !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
