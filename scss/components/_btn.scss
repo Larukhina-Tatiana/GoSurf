@@ -1,5 +1,5 @@
 .btn {
-  font-size: rem(40);
+  font-size: clamp(1.25rem, calc(0.89rem + 1.79vw), 2.5rem);
   font-weight: 800;
   line-height: calc(36/40);
 
@@ -26,7 +26,7 @@
       content: url(../images/icons/arrow-right.svg);
       width: rem(25);
       height: rem(21);
-      top: 37%;
+      top: 50%;
       transform: translateY(-50%);
       right: rem(17);
     }

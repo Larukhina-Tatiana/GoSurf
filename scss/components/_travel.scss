@@ -1,14 +1,19 @@
 .travel {
-  padding: rem(97) 0 rem(265) 0;
-  background-image: url(../images/travel/travel-bg.png);
+  // padding: rem(97) 0 rem(265) 0;
+  padding-top: clamp(0.63rem, calc(0.09rem + 2.68vw), 2.5rem);
+  // padding-bottom: rem(128);
+  padding-bottom: clamp(1.88rem, calc(-2.02rem + 11.14vw), 8rem);
+  background-image: url(../images/travel/travel-bacground.png);
+  background-size: auto;
+  background-position: bottom right;
 
 
-  &__title {
-    width: 672px;
-
-    h2 {
-      right: rem(230);
-    }
+  @media screen and (width < 1200.99px) {
+    background-size: auto 33vh;
   }
 
+  @media screen and (width < 425.99px) {
+    background-size: auto 40vh;
+    background-position: bottom 16% right;
+  }
 }

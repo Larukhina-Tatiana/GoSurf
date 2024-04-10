@@ -1,15 +1,16 @@
 .titles {
   position: relative;
-  width: rem(467);
+  // width: rem(467);
   // outline: 1px solid green;
   text-align: right;
-  padding-bottom: rem(80);
+  padding-bottom: clamp(5.88rem, calc(4.16rem + 8.57vw), 11.88rem);
+
 
   h2 {
-    position: relative;
+    position: absolute;
     top: rem(-1);
-    right: clamp(12.88rem, calc(14.59rem + -8.57vw), 6.88rem);
-    font-size: clamp(3.75rem, calc(3.39rem + 1.79vw), 5rem);
+    left: 16%;
+    font-size: clamp(2.5rem, calc(1.79rem + 3.57vw), 5rem);
     font-weight: 800;
     line-height: 1.95;
     color: $white;
@@ -19,26 +20,31 @@
       display: inline-block;
       content: '';
       background-color: $accent;
-      width: rem(80);
+      // width: rem(80);
+      width: clamp(2.5rem, calc(1.79rem + 3.57vw), 5rem);
       height: rem(1);
       right: 0;
-      top: rem(24);
+      top: clamp(0.75rem, calc(0.54rem + 1.07vw), 1.5rem);
     }
   }
 
   &-bg {
     position: absolute;
-    top: rem(56);
-    // left: rem(-70);
-    left: clamp(1.63rem, calc(3.34rem + -8.57vw), -4.37rem);
-    font-size: clamp(7.5rem, calc(6.07rem + 7.14vw), 12.5rem);
+    // top: rem(56);
+    top: clamp(1.5rem, calc(0.93rem + 2.86vw), 3.5rem);
+    left: -4%;
+    font-size: clamp(5rem, calc(2.86rem + 10.71vw), 12.5rem);
     font-weight: 800;
     color: rgba($white, .02);
-    transform: translateX(-50px);
     display: inline-block;
     line-height: calc(156/200);
   }
 
+  @media screen and (width < 1024.99px) {
+    & h2 {
+      left: 23%;
+    }
+  }
 
 }
 
@@ -83,6 +89,7 @@
     }
   }
 
+
   @media screen and (width < 519.99px) {
     letter-spacing: normal;
   }
@@ -103,7 +110,7 @@
   font-size: clamp(1.25rem, calc(0.89rem + 1.79vw), 2.5rem);
 
   &--margin-top {
-    margin-top: rem(25);
+    margin-top: clamp(0.63rem, calc(0.36rem + 1.34vw), 1.56rem);
   }
 
   span {

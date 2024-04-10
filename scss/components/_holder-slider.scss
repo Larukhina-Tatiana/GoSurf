@@ -1,32 +1,34 @@
 .holder-slider {
 
-  &__subtitle {
-    text-align: right;
-  }
-
   &__head {
-    min-height: rem(781);
+    min-height: rem(524);
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
+  }
 
+  &__subtitle {
+    text-align: right;
+    padding-right: clamp(2rem, calc(1.14rem + 4.29vw), 5rem);
   }
 
   &__detailing {
-    height: rem(385);
+    // min-height: rem(120);
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: auto;
-    padding: rem(160) 0 0 rem(132);
-    margin-top: rem(-270);
-  }
+    background-size: contain;
 
-  &__subtitle {
-    padding: rem(80) rem(80) 0 0;
+    height: rem(377);
+    padding-top: rem(160);
+    padding-left: clamp(0.63rem, calc(-0.62rem + 6.25vw), 5rem);
+    // padding: rem(160) 0 0 rem(132);
+    margin-top: rem(-206);
+
   }
 
   &__detailing-subtitle {
     text-align: left;
+    // margin-top: rem(-120);
   }
 
   &__detailing-info-text {
@@ -39,40 +41,53 @@
     }
   }
 
+  &__avia-logo {
+    width: clamp(2.38rem, calc(2.13rem + 1.25vw), 3.25rem);
+  }
+
   &__info {
-    margin-top: rem(90);
+    // margin-top: rem(90);
+    margin-top: clamp(2.25rem, calc(-1.61rem + 8.04vw), 5.63rem);
     display: flex;
-    justify-content: space-around;
-    margin-bottom: rem(66);
+    justify-content: space-evenly;
+    margin-bottom: rem(106);
+    // margin-bottom: clamp(0rem, calc(-10.15rem + 15.87vw), 4.13rem);
 
     &-item {
-      display: flex;
       min-height: rem(200);
+      // margin-bottom: rem(66);
       position: relative;
 
     }
 
     &-descr {
       position: absolute;
-      font-size: rem(18);
+      font-size: clamp(0.88rem, calc(0.8rem + 0.36vw), 1.13rem);
       line-height: calc(22/18);
       letter-spacing: rem(8);
       rotate: -90deg;
       color: $gray;
-      top: rem(89);
-      left: rem(-160);
-      width: 100%;
+      top: rem(113);
+      left: rem(-162);
+      width: rem(242);
+      height: 0;
       white-space: nowrap;
       text-align: right;
     }
 
     &-meaning {
-      font-size: rem(40);
+      // width: rem(242);
+      // padding-left: rem(40);
+      // font-size: rem(40);
+      font-size: clamp(1.25rem, calc(0.89rem + 1.79vw), 2.5rem);
       font-weight: 800;
-      line-height: calc(36/40);
+      line-height: clamp(1.25rem, calc(0.98rem + 1.34vw), 2.19rem);
+      position: relative;
 
       span {
-        display: block;
+        position: absolute;
+        bottom: rem(-37);
+        right: rem(0);
         font-size: rem(14);
         font-weight: 400;
         line-height: calc(36/14);
@@ -80,6 +95,79 @@
         text-align: right;
         color: $gray;
       }
+    }
+  }
+
+
+
+
+
+  @media screen and (width < 1200.99px) {
+
+    &__head {
+      min-height: rem(426);
+    }
+
+    &__detailing {
+      margin-top: rem(-196);
+      height: rem(250);
+    }
+
+    &__info {
+      display: flex;
+      padding-left: rem(10);
+      margin-bottom: rem(64);
+      flex-wrap: wrap;
+
+
+      &-item {
+        display: block;
+        min-height: auto;
+        margin-bottom: clamp(0.94rem, calc(0.67rem + 1.34vw), 1.88rem);
+      }
+
+      &-descr {
+        position: static;
+        rotate: 0deg;
+        text-align: left;
+        margin-bottom: rem(45);
+      }
+
+      &-meaning span {
+        text-align: left;
+        right: rem(64);
+      }
+    }
+  }
+
+
+  @media screen and (width < 768.99px) {
+    &__detailing {
+      margin-top: rem(-276);
+      padding-top: rem(180);
+    }
+
+    &__info-descr {
+      margin-bottom: rem(30);
+    }
+
+    &__info-meaning {
+
+      & span {
+        right: rem(100);
+      }
+    }
+  }
+
+  @media screen and (width < 425.99px) {
+    &__detailing {
+      margin-top: rem(-356);
+    }
+  }
+
+  @media screen and (width < 375.99px) {
+    &__detailing {
+      margin-top: rem(-340);
     }
   }
 }

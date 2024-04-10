@@ -8,7 +8,11 @@
   }
 
   .slick-arrow {
-    top: rem(200);
+    top: rem(-48);
     color: rgba($white, .25);
+
+    @media screen and (width < 375.99px) {
+      top: rem(256);
+    }
   }
 }

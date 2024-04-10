@@ -18,19 +18,11 @@
 }
 
 .slick-next {
-  right: rem(80);
+  // right: rem(80);
+  right: clamp(2rem, calc(1.14rem + 4.29vw), 5rem);
 }
 
 .slick-prev {
-  right: rem(125);
-}
-
-@media screen and (width < 1365.99px) {
-  .slick-next {
-    right: rem(16);
-  }
-
-  .slick-prev {
-    right: rem(61);
-  }
+  // right: rem(125);
+  right: clamp(4.69rem, calc(3.79rem + 4.46vw), 7.81rem);
 }
