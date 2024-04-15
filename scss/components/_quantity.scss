@@ -42,7 +42,7 @@ input[type=number] {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: rem(45);
+  top: rem(60);
 }
 
 .quantity-button.quantity-up {
@@ -52,7 +52,7 @@ input[type=number] {
 
 .quantity-button.quantity-down {
   position: absolute;
-  right: rem(25);
+  right: rem(50);
 }
 
 @media screen and (width < 1200.99px) {
@@ -61,7 +61,7 @@ input[type=number] {
   }
 
   .quantity-button.quantity-down {
-    right: rem(89);
+    right: rem(114);
   }
 }
 
@@ -71,7 +71,7 @@ input[type=number] {
   }
 
   .quantity-button.quantity-down {
-    right: rem(105);
+    right: rem(130);
   }
 }
 

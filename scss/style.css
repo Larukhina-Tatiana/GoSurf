@@ -1151,6 +1151,7 @@ body {
   font-weight: 800;
   line-height: clamp(1.25rem, 0.98rem + 1.34vw, 2.19rem);
   position: relative;
+  height: 50px;
 }
 .holder-slider__info-meaning span {
   position: absolute;
@@ -1171,8 +1172,9 @@ body {
   .holder-slider__info {
     display: flex;
     padding-left: 0.625rem;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     flex-wrap: wrap;
+    gap: clamp(1.125rem, 0.398rem + 3.64vw, 3.125rem) 0;
   }
   .holder-slider__info-item {
     display: block;
@@ -1201,6 +1203,7 @@ body {
     margin-bottom: 1.875rem;
   }
   .holder-slider__info-meaning span {
+    bottom: -1.3125rem;
     right: 6.25rem;
   }
 }
@@ -1217,6 +1220,9 @@ body {
 @media screen and (width < 425.99px) {
   .holder-slider__detailing {
     margin-top: -21.25rem;
+  }
+  .holder-slider__info-meaning span {
+    bottom: -0.3125rem;
   }
 }
 @media screen and (width < 375.99px) {
@@ -1331,7 +1337,7 @@ input[type=number] {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 2.8125rem;
+  top: 3.75rem;
 }
 
 .quantity-button.quantity-up {
@@ -1341,7 +1347,7 @@ input[type=number] {
 
 .quantity-button.quantity-down {
   position: absolute;
-  right: 1.5625rem;
+  right: 3.125rem;
 }
 
 @media screen and (width < 1200.99px) {
@@ -1349,7 +1355,7 @@ input[type=number] {
     right: 4rem;
   }
   .quantity-button.quantity-down {
-    right: 5.5625rem;
+    right: 7.125rem;
   }
 }
 @media screen and (width < 768.99px) {
@@ -1357,7 +1363,7 @@ input[type=number] {
     right: 5rem;
   }
   .quantity-button.quantity-down {
-    right: 6.5625rem;
+    right: 8.125rem;
   }
 }
 @media screen and (width < 494.99px) {
