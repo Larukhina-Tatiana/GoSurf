@@ -1,13 +1,42 @@
 .sleep {
-  padding: rem(97) 0 rem(265) 0;
+  padding-top: clamp(0.625rem, -0.929rem + 7.77vw, 6.063rem);
+  padding-bottom: rem(265);
   background-image: url(../images/sleep/sleep-bg.png);
 
+  @media screen and (width < 768.99px) {
+    &-slider__detailing {
+      margin-top: rem(-68);
+    }
+  }
 
-  &__title {
-    width: rem(550);
+  @media screen and (width < 580.99px) {
+    &-slider__detailing {
+      margin-top: rem(-164);
+    }
+  }
 
-    h2 {
-      right: rem(135);
+  @media screen and (width < 485.99px) {
+    &-slider__detailing {
+      margin-top: rem(-212);
+    }
+  }
+
+  @media screen and (width < 425.99px) {
+    &-slider__detailing {
+      margin-top: rem(-260);
+    }
+  }
+
+  @media screen and (width < 375.99px) {
+    &-slider__detailing {
+      margin-top: rem(-292);
+    }
+  }
+
+
+  .slick-arrow {
+    @media screen and (width < 375.99px) {
+      top: rem(240);
     }
   }
 }

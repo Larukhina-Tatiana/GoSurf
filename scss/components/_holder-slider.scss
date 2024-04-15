@@ -104,10 +104,6 @@
 
   @media screen and (width < 1200.99px) {
 
-    &__head {
-      min-height: rem(426);
-    }
-
     &__detailing {
       margin-top: rem(-196);
       height: rem(250);
@@ -118,7 +114,6 @@
       padding-left: rem(10);
       margin-bottom: rem(64);
       flex-wrap: wrap;
-
 
       &-item {
         display: block;
@@ -143,8 +138,10 @@
 
   @media screen and (width < 768.99px) {
     &__detailing {
-      margin-top: rem(-276);
-      padding-top: rem(180);
+      background-image: none !important;
+      margin-top: rem(-196);
+      padding-top: 0;
+      height: auto;
     }
 
     &__info-descr {
@@ -159,15 +156,30 @@
     }
   }
 
+  @media screen and (width < 580.99px) {
+    &__detailing {
+      margin-top: rem(-276);
+    }
+  }
+
+  @media screen and (width < 485.99px) {
+    &__detailing {
+      margin-top: rem(-308);
+    }
+  }
+
   @media screen and (width < 425.99px) {
     &__detailing {
-      margin-top: rem(-356);
+
+      margin-top: rem(-340);
+
+
     }
   }
 
   @media screen and (width < 375.99px) {
     &__detailing {
-      margin-top: rem(-340);
+      margin-top: rem(-372);
     }
   }
 }
