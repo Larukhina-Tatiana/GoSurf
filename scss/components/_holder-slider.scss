@@ -47,7 +47,7 @@
 
   &__info {
     // margin-top: rem(90);
-    margin-top: clamp(2.25rem, calc(-1.61rem + 8.04vw), 5.63rem);
+    // margin-top: clamp(2.25rem, calc(-1.61rem + 8.04vw), 5.63rem);
     display: flex;
     justify-content: space-evenly;
     margin-bottom: rem(106);
@@ -109,7 +109,7 @@
     &__info {
       display: flex;
       padding-left: rem(10);
-      margin-bottom: rem(16);
+      margin-bottom: rem(64);
       flex-wrap: wrap;
       gap: clamp(1.125rem, 0.398rem + 3.64vw, 3.125rem) 0;
 

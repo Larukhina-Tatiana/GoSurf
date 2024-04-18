@@ -101,20 +101,20 @@ function scripts() {
 function images() {
   // return src(["app/images/**/*.*", "!app/images/**/*.svg"])
   return (
-    src(["images/src/surf/*.*", "!images/src/*.svg"])
+    src(["images/src/shop/*.*", "!images/src/*.svg"])
       .pipe(newer("images"))
       .pipe(avif({ quality: 50 }))
 
       // .pipe(src("app/images/**/*.*"))
-      .pipe(src("images/src/surf/*.*"))
+      .pipe(src("images/src/shop/*.*"))
       .pipe(newer("images"))
       .pipe(webp())
 
-      .pipe(src("images/src/surf/*.*"))
+      .pipe(src("images/src/shop/*.*"))
       .pipe(newer("images"))
       .pipe(imagemin())
 
-      .pipe(dest("images/surf"))
+      .pipe(dest("images/shop"))
   );
 }
 

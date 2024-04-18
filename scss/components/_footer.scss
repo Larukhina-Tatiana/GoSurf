@@ -1,5 +1,5 @@
 .footer {
-  padding: rem(284) 0 rem(34) 0;
+  padding: clamp(3.75rem, -0.25rem + 20vw, 17.75rem) 0 rem(34) 0;
   text-align: center;
 
   &__btn {

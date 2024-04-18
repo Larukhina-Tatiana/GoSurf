@@ -9,7 +9,7 @@
       right: rem(36);
 
       .surfboard-box__content {
-        padding: 0 0 0 rem(104);
+        padding: 0 0 0 clamp(1.5rem, calc(0.07rem + 7.14vw), 6.5rem);
         left: rem(30);
         text-align: left;
 
@@ -59,12 +59,14 @@
     &__content {
       position: absolute;
       opacity: 0;
-      width: rem(360);
-      font-size: rem(24);
+      // width: rem(360);
+      width: clamp(6.25rem, calc(1.61rem + 23.21vw), 22.5rem);
+      // font-size: rem(24);
+      font-size: clamp(0.88rem, calc(0.7rem + 0.89vw), 1.5rem);
       font-weight: 800;
       line-height: 1;
       text-align: end;
-      padding: 0 rem(104) 0 0;
+      padding: 0 clamp(1.5rem, calc(0.07rem + 7.14vw), 6.5rem) 0 0;
       right: rem(30);
       top: 50%;
       transform: translateY(-50%);
@@ -76,14 +78,13 @@
         display: inline-block;
         content: '';
         background-color: $gray;
-        width: rem(80);
+        // width: rem(80);
+        width: clamp(1rem, calc(-0.14rem + 5.71vw), 5rem);
         height: rem(1);
         top: 50%;
         transform: translateY(-50%);
         right: 0;
       }
-
-
     }
   }
 
@@ -95,5 +96,11 @@
 
   .surfboard-box__circle.minus + .surfboard-box__content {
     opacity: 1;
+  }
+
+  @media screen and (width < 1024.99px) {
+    &-box__position1 {
+      right: rem(20);
+    }
   }
 }

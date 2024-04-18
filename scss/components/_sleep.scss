@@ -28,6 +28,10 @@
   }
 
   @media screen and (width < 375.99px) {
+    padding-bottom: rem(200);
+    background-size: auto 22vh;
+
+
     &-slider__detailing {
       margin-top: rem(-292);
     }

@@ -1,44 +1,44 @@
 $(function () {
-  // let currentDate = new Date();
-  // // console.log(currentDate.getMonth() + 1);
-  // var date = currentDate.getDate();
-  // document.getElementById("date").innerHTML = date;
-  // var month = currentDate.getMonth() + 1;
-  // document.getElementById("month").innerHTML = month;
-  // var year = currentDate.getFullYear();
-  // document.getElementById("year").innerHTML = year;
-  // // console.log(currentDate.getFullYear());
-  // // console.log(currentDate.getDate());
+  let currentDate = new Date();
+  // console.log(currentDate.getMonth() + 1);
+  var date = currentDate.getDate();
+  document.getElementById("date").innerHTML = date;
+  var month = currentDate.getMonth() + 1;
+  document.getElementById("month").innerHTML = month;
+  var year = currentDate.getFullYear();
+  document.getElementById("year").innerHTML = year;
+  // console.log(currentDate.getFullYear());
+  // console.log(currentDate.getDate());
 
-  // var timeElement = document.getElementById("currentTime");
-  // setInterval(function () {
-  //   var currentTime = new Date();
-  //   timeElement.textContent = currentTime.toLocaleTimeString();
-  // }, 1000);
+  var timeElement = document.getElementById("currentTime");
+  setInterval(function () {
+    var currentTime = new Date();
+    timeElement.textContent = currentTime.toLocaleTimeString();
+  }, 1000);
 
-  // $(".menu__mobile").on("click", function () {
-  //   $(".menu__mobile").toggleClass("menu--open");
-  // });
-  // $(".menu__mobile").on("click", function () {
-  //   $(".header__menu").toggleClass("menu--open");
-  // });
+  $(".menu__mobile").on("click", function () {
+    $(".menu__mobile").toggleClass("menu--open");
+  });
+  $(".menu__mobile").on("click", function () {
+    $(".header__menu").toggleClass("menu--open");
+  });
 
-  // $(".header__slider").slick({
-  //   infinite: true,
-  //   fade: true,
-  //   nextArrow:
-  //     '<button class="slick-arrow slick-next" aria-label="Next"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-right-next"></use></button>',
-  //   prevArrow:
-  //     '<button class="slick-arrow slick-prev" aria-label="Previous"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-left-prev"></use></button>',
-  //   asNavFor: ".slider-dots",
-  // });
+  $(".header__slider").slick({
+    infinite: true,
+    fade: true,
+    nextArrow:
+      '<button class="slick-arrow slick-next" aria-label="Next"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-right-next"></use></button>',
+    prevArrow:
+      '<button class="slick-arrow slick-prev" aria-label="Previous"><svg width="24" height="20"><use href="./images/icons/icons.svg#arrow-left-prev"></use></button>',
+    asNavFor: ".slider-dots",
+  });
 
-  // $(".slider-dots").slick({
-  //   arrows: false,
-  //   // slidesToShow: 4,
-  //   // slidesTOScroll: 4,
-  //   asNavFor: ".header__slider",
-  // });
+  $(".slider-dots").slick({
+    arrows: false,
+    // slidesToShow: 4,
+    // slidesTOScroll: 4,
+    asNavFor: ".header__slider",
+  });
 
   $(".surf__slider").slick({
     centerMode: true,

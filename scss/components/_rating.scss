@@ -4,4 +4,12 @@
   &__item {
     margin-left: rem(-18);
   }
+
+
+  @media screen and (width < 768.99px) {
+    &__item img {
+      width: clamp(2.5rem, calc(2.05rem + 2.23vw), 3.13rem);
+      height: auto;
+    }
+  }
 }
